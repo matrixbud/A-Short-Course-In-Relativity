@@ -1,0 +1,2087 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     73909,       2079]
+NotebookOptionsPosition[     73237,       2057]
+NotebookOutlinePosition[     73953,       2081]
+CellTagsIndexPosition[     73910,       2078]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ StyleBox["Exercise 2.2.7",
+  FontColor->RGBColor[0., 0., 0.9981841763942931]],
+ "  (not in book, but needed).  Let ",
+ StyleBox["\[CapitalDelta]",
+  FontWeight->"Bold"],
+ " = det ",
+ StyleBox["G,",
+  FontSlant->"Italic"],
+ " where ",
+ StyleBox["G = (",
+  FontWeight->"Bold"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],
+  FontWeight->"Bold",ExpressionUUID->"defc7756-7d85-4765-a81d-dd29e86d9211"],
+ StyleBox[")",
+  FontWeight->"Bold"],
+ " is the metric tensor matrix. The ",
+ StyleBox["minor",
+  FontWeight->"Bold"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["m", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],
+  FontWeight->"Bold",ExpressionUUID->"b839fdb9-d74e-48f2-bb0a-8cbc13a2f0e7"],
+ ",  for element ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    StyleBox[
+     RowBox[{"a", " ", "b"}],
+     FontSlant->"Italic"]], TraditionalForm]],ExpressionUUID->
+  "80ca9f36-ab5e-4081-a778-ae3928db937c"],
+ " is the determinant of the submatrix that excludes row ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ " and column ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ ". The ",
+ StyleBox["cofactor",
+  FontWeight->"Bold"],
+ " for element ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    StyleBox["ab",
+     FontSlant->"Italic"]], TraditionalForm]],ExpressionUUID->
+  "91a93eca-8b74-457e-a0b5-00adf016573e"],
+ " is ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    SuperscriptBox["c", 
+     StyleBox[
+      RowBox[{"a", " ", "b"}],
+      FontSlant->"Italic"]],
+    FontWeight->"Bold"], TraditionalForm]],ExpressionUUID->
+  "05fb46ab-fad8-4d19-891e-8715b5d02322"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}], 
+    RowBox[{"a", "+", "b"}]], TraditionalForm]],ExpressionUUID->
+  "897f31aa-ea72-4adc-82db-a076284c39ce"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["m", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "eb599a10-07a5-486d-a373-f7464ab7312b"],
+ ". Show that \n\t",
+ Cell[BoxData[
+  FormBox[
+   FrameBox[
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[PartialD]", "c"], "\[CapitalDelta]"}], "=", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["c", 
+        RowBox[{"a", " ", "b"}]], " ", 
+       RowBox[{
+        SubscriptBox["\[PartialD]", "c"], 
+        SubscriptBox["g", 
+         RowBox[{"a", " ", "b"}]]}]}], " ", "=", 
+      RowBox[{
+       SuperscriptBox["\[CapitalDelta]g", 
+        RowBox[{"a", " ", "b"}]], " ", 
+       RowBox[{
+        SubscriptBox["\[PartialD]", "c"], 
+        SubscriptBox["g", 
+         RowBox[{"a", " ", "b"}]]}]}]}]}]], TraditionalForm]],ExpressionUUID->
+  "75c4015a-7b02-4809-b5b4-e99771657ca4"],
+ " .\n\n",
+ StyleBox["Solution",
+  FontColor->RGBColor[0, 0, 1]],
+ "  By definition, \[CapitalDelta] is the sum of all possible products of the \
+form \n",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}], 
+    RowBox[{
+     SubscriptBox["a", "1"], "+", 
+     SubscriptBox["b", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "cc1f0cd2-56e1-4722-8ae3-b91316c8bff1"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{
+     SubscriptBox["a", "1"], " ", 
+     SubscriptBox["b", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "5a358c8c-cea9-464f-b4c2-7c06485a2961"],
+ " \[CenterDot] ... \[CenterDot] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["g", 
+     RowBox[{
+      SubscriptBox["a", "N"], " ", 
+      SubscriptBox["b", "N"]}]], " ", " "}], TraditionalForm]],ExpressionUUID->
+  "79a737a8-6350-4293-92e5-76f1ce38d13a"],
+ "where every factor is in a distinct row and column. This definition is \
+somewhat complicated to state and even more complicated to express \
+mathematically, which we do now.\n\nThere are two formulas for \
+\[CapitalDelta] that we use here. The first one is to sum the products ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "0e04eaa4-e071-4a94-b12c-1ac9288a1caf"],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["c", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "f8fb718d-1245-4efa-aa80-f9e9828a5868"],
+ " across row a. However, there is a problem on how to express this. In \
+non-Einstein notation, we can write\n\t\[CapitalDelta] = ",
+ Cell[BoxData[
+  FormBox[
+   UnderoverscriptBox["\[CapitalSigma]", 
+    RowBox[{"b", "=", "1"}], "N"], TraditionalForm]],ExpressionUUID->
+  "be3b5e9c-c48a-4651-9557-35a7679705ca"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "2ffa2966-d339-465f-ab31-8bbb00494c07"],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["c", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "9379d2cd-a17a-4277-beab-705b2ba39bc7"],
+ ".\n\nHowever, in Einstein notation, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],
+  FontColor->GrayLevel[0],ExpressionUUID->
+  "3d2cacb2-6ddb-4f28-99fc-d08d27677f2a"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    SuperscriptBox["c", 
+     RowBox[{"a", " ", "b"}]]}], TraditionalForm]],
+  FontColor->GrayLevel[0],ExpressionUUID->
+  "4d80e900-650b-44d4-b783-7852be5ccb94"],
+ " sums over all rows and we end up with \n\[CapitalDelta] +  ... + \
+\[CapitalDelta], ",
+ StyleBox["N",
+  FontSlant->"Italic"],
+ " times:\n\t",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "cddf978b-cb36-4e84-8442-7dce775428e2"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    SuperscriptBox["c", 
+     RowBox[{"a", " ", "b"}]]}], TraditionalForm]],ExpressionUUID->
+  "b9e2d441-c0bb-47e3-8629-61861078edd3"],
+ " = ",
+ StyleBox["N",
+  FontSlant->"Italic"],
+ " \[CapitalDelta].  \t\t\t\t\t\t\t\t\t\t\t\t     (a)\n\nA similar formula \
+is:\n\t",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "aa221870-88a5-4dde-b6ed-f823bd5f6954"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    SuperscriptBox["g", 
+     RowBox[{"a", " ", "b"}]]}], TraditionalForm]],ExpressionUUID->
+  "260cbec1-7584-4821-a44f-e50deac4b6a3"],
+ " = ",
+ StyleBox["N",
+  FontSlant->"Italic"],
+ "\t\t\t\t\t\t\t\t\t\t\t\t\t     (b)\n\t\t",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "9c32b5de-6ba0-4fd6-803e-39b83388c93d"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    SuperscriptBox["g", 
+     RowBox[{"a", " ", "b"}]]}], TraditionalForm]],ExpressionUUID->
+  "e36f0e01-4ca2-4156-bc70-3e8f479da6c6"],
+ " =  ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "6536ebb2-9223-4673-a8ad-1bf2d5ef9a3e"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["g", 
+    StyleBox[
+     RowBox[{"a", " ", "d"}],
+     FontSlant->"Italic"]], TraditionalForm]],ExpressionUUID->
+  "06cd303a-9dc7-4eeb-8639-1021d685b31b"],
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["\[Delta]", "d", 
+    StyleBox["b",
+     FontWeight->"Regular"]], TraditionalForm]], "Input",
+  FontSize->18,
+  FontWeight->"Regular",ExpressionUUID->
+  "4b00f317-da8d-429f-871b-775d02ea3585"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["=", 
+    RowBox[{"(", 
+     StyleBox["1.78",
+      FontSlant->"Plain"], ")"}]], TraditionalForm]],ExpressionUUID->
+  "85d8596f-feab-42e9-9e4b-ce112c85ddfd"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["\[Delta]", "b", 
+    StyleBox["d",
+     FontWeight->"Regular"]], TraditionalForm]], "Input",
+  FontSize->18,
+  FontWeight->"Regular",ExpressionUUID->
+  "3811851f-865d-4c49-bccc-8ae8fba50c48"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["\[Delta]", "d", 
+    StyleBox["b",
+     FontWeight->"Regular"]], TraditionalForm]], "Input",
+  FontSize->18,
+  FontWeight->"Regular",ExpressionUUID->
+  "1f9e9db4-85d9-472a-a661-c275675a3575"],
+ " = ",
+ StyleBox["N.",
+  FontSlant->"Italic"],
+ "\n\nPutting these two formulas together we get:  \n\t",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["c", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "32a1321f-900e-49c6-8994-ba32bcd21725"],
+ " = \[CapitalDelta] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "2fd719c1-5620-4364-aa03-6eeeb0eb8b2c"],
+ "\t\t\t:\t\t\t\t\t\t\t\t\t\t     (c)\n\t   ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "aabae762-c8f3-4244-9c37-dc1c44478b10"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    SuperscriptBox["c", 
+     RowBox[{"a", " ", "b"}]]}], TraditionalForm]],ExpressionUUID->
+  "20507b45-da37-4298-bfbe-026cf5617e12"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    OverscriptBox["=", 
+     RowBox[{"(", 
+      StyleBox["a",
+       FontSlant->"Plain"], ")"}]],
+    FontColor->GrayLevel[0]], TraditionalForm]],
+  FontColor->RGBColor[1, 0, 0],ExpressionUUID->
+  "1a6bf5b0-f227-4b35-b7c5-9b8d8c12bcd9"],
+ " ",
+ StyleBox["N",
+  FontSlant->"Italic"],
+ " \[CapitalDelta] ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    OverscriptBox["=", 
+     RowBox[{"(", 
+      StyleBox["b",
+       FontSlant->"Plain"], ")"}]],
+    FontColor->GrayLevel[0]], TraditionalForm]],
+  FontColor->RGBColor[1, 0, 0],ExpressionUUID->
+  "60a412eb-f300-4000-9a0e-392b8af66707"],
+ "  ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "7be09df3-d2d5-4e26-979b-0fbdfc752f00"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    SuperscriptBox["g", 
+     RowBox[{"a", " ", "b"}]]}], TraditionalForm]],ExpressionUUID->
+  "cce3b7a5-aba0-477f-8b4a-db3c17dd402e"],
+ "\[CapitalDelta]    \[DoubleRightArrow]\t    ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["c", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "c7fa6a2c-6405-4eed-8092-a2cac5f8122e"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    SuperscriptBox["g", 
+     RowBox[{"a", " ", "b"}]]}], TraditionalForm]],ExpressionUUID->
+  "085413b6-290f-429a-a210-78ab031e81ae"],
+ "\[CapitalDelta]\t\t\[Checkmark]\n\nThe second definition of \[CapitalDelta] \
+is more convoluted. We express \[CapitalDelta] mathematically exactly as \
+stated in words, above:\n\t\[CapitalDelta] \[Congruent] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["b", "1"], " ", "..."}], " ", 
+     SubscriptBox["b", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "b49f0ee2-2a65-45e4-af95-dfeb005e1ac0"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"1", " ", 
+     SubscriptBox["b", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "798f943b-0d1b-432d-8968-6f9d2a918ea9"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", 
+     SubscriptBox["b", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "ac28b306-9a7f-4c54-86b4-2cf69bd5fa36"],
+ ",\t\t\t\t\t\t\t\t\t\t     (d)\n\nby taking advantage of the ",
+ StyleBox["Levi-Civita symbol, ",
+  FontWeight->"Bold"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    SuperscriptBox["\[Epsilon]", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["b", "1"], " ", "..."}], " ", 
+      SubscriptBox["b", "N"]}]],
+    FontSize->18,
+    FontWeight->"Bold"], TraditionalForm]], "Input",ExpressionUUID->
+  "3f25883f-96b0-4e09-b6b8-a2573b600fed"],
+ StyleBox[", ",
+  FontWeight->"Bold"],
+ " that we now explain. \n\nThe indices ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["b", "k"], TraditionalForm]],ExpressionUUID->
+  "2025cea8-407b-4694-a8dd-a5917771372f"],
+ " range over the integers 1 \[Dash] ",
+ StyleBox["N",
+  FontSlant->"Italic"],
+ " for all ",
+ StyleBox["k",
+  FontSlant->"Italic"],
+ ". The symbol ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    SuperscriptBox["\[Epsilon]", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["b", "1"], " ", "..."}], " ", 
+      SubscriptBox["b", "N"]}]],
+    FontSize->18,
+    FontWeight->"Plain"], TraditionalForm]], "Input",ExpressionUUID->
+  "02257fb5-e61d-4748-8867-008c7381e512"],
+ " is defined to be zero unless each integer appears exactly once; that is, \
+unless \n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["b", "1"], TraditionalForm]],ExpressionUUID->
+  "374d01d6-c6a3-44a2-a702-90d91bf6a69c"],
+ ", ..., ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["b", "N"], TraditionalForm]],ExpressionUUID->
+  "9d647abe-f656-4c84-9a5b-25835e662c6d"],
+ " is a ",
+ "permutation",
+ " of 1, 2, ..., ",
+ StyleBox["N",
+  FontSlant->"Italic"],
+ ". For permutations, its value is defined as +1 for ",
+ StyleBox["even permutations",
+  FontWeight->"Bold"],
+ " and -1 for ",
+ StyleBox["odd permutations",
+  FontWeight->"Bold"],
+ ". A permutation is even if the number of pairwise swaps required to restore \
+the natural order is even, and odd, otherwise. For example, 1, 3, 2, 4 is an \
+odd permutation because it requires just one swap. 1, 3, 4, 2 is an even \
+permutation. So, in the determinant for ",
+ StyleBox["N",
+  FontSlant->"Italic"],
+ " = 3, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", "11"], TraditionalForm]],ExpressionUUID->
+  "2838c7a2-754d-48b2-83d9-d7b132bb82ce"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", "22"], TraditionalForm]],ExpressionUUID->
+  "49aafecc-701a-4a86-962e-b2d16586b3a3"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", "33"], TraditionalForm]],ExpressionUUID->
+  "016f5413-332a-4308-a6b8-2e710db1f014"],
+ " would (correctly) be preceded by a plus sign, represented by ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     SubscriptBox["b", "1"], " ", 
+     SubscriptBox["b", "2"], " ", 
+     SubscriptBox["b", "3"]}]], TraditionalForm]],ExpressionUUID->
+  "9b05e8ae-0f44-4478-9572-7bede315ba30"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", "123"], TraditionalForm]],ExpressionUUID->
+  "e6c5ee81-1fa9-44f2-a6e2-5c63fbae4097"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", "11"], TraditionalForm]],ExpressionUUID->
+  "7f4a8345-d0fb-4aef-8dca-0d4f7b5202bc"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", "23"], TraditionalForm]],ExpressionUUID->
+  "8daebe08-120f-4281-a440-1c517e057caa"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", "32"], TraditionalForm]],ExpressionUUID->
+  "976dc1bc-f106-4201-9b69-3352d64271a4"],
+ " would be preceded by a negative sign, ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", "132"], TraditionalForm]],ExpressionUUID->
+  "0cef16e9-ef83-4cbd-a6bc-fd2655819771"],
+ ". \n\nWe call it the Levi-Civita ",
+ StyleBox["symbol",
+  FontSlant->"Italic"],
+ " because it is a pseudo-tensor, almost a tensor except that it reverses \
+sign under Jacobian transformations having negative determinant. It is not \
+quite proper to call it the Levi-Civita tensor. \n\nThe cofactor, also, can \
+be defined in Levi-Civita terminology since it is a determinant. Consider the \
+following attempt at a cofactor expression:\n\t",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["c", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "591e32a4-81f1-4320-b37a-26f5bb4c7dc9"],
+ " \[Congruent] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SubscriptBox["k", "1"], " ", "..."}], 
+       SubscriptBox["k", 
+        RowBox[{"a", "-", "1"}]], " ", "b", "  ", 
+       SubscriptBox["k", 
+        RowBox[{"a", "+", "1"}]]}], " ", "..."}], " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "77562208-1e51-4921-8655-c00f3bbfdfbf"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"1", " ", 
+     SubscriptBox["k", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "16273cdc-fbd5-48de-ba82-a07f08c645d2"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "-", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"a", "-", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "aae3af47-8ca2-4713-9569-8a9aa97f60ff"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "+", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"a", "+", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "7666cfed-fc48-420e-a345-72cb1cf84279"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "e0c6bb68-674f-4add-bfdd-b10dc7eb7212"],
+ ".\n\nEvery row appears in ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"1", " ", 
+     SubscriptBox["k", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "50fd949f-fe7c-4a37-99ac-302ffe1c935e"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "-", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"a", "-", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "ee3a2815-976c-455b-adaf-d13a403d0096"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "+", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"a", "+", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "8532f350-c52c-485f-8049-642158232614"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "fbc16e7b-9145-4c1f-8a19-1d4615ef9f11"],
+ " except row a. The exponent of \[Epsilon] ranges over all strings ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       SubscriptBox["k", "1"], " ", "..."}], 
+      SubscriptBox["k", 
+       RowBox[{"a", "-", "1"}]], " ", "b", "  ", 
+      SubscriptBox["k", 
+       RowBox[{"a", "+", "1"}]]}], " ", "..."}], " ", 
+    SubscriptBox["k", "N"]}], TraditionalForm]],ExpressionUUID->
+  "c4be2431-ea01-4eec-aa52-61617d0f7b20"],
+ ", but \[Epsilon] is non-zero only for strings that are permutations of 1 \
+\[Dash] ",
+ StyleBox["N",
+  FontSlant->"Italic"],
+ "; that is, only when none of the ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "a"], TraditionalForm]],ExpressionUUID->
+  "2569ce9e-8849-4ed0-8029-78bbeee9e200"],
+ "\[CloseCurlyQuote]s equal ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ ". So, when the string is a permutation, every column appears in ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       SubscriptBox["k", "1"], " ", "..."}], 
+      SubscriptBox["k", 
+       RowBox[{"a", "-", "1"}]], " ", "b", "  ", 
+      SubscriptBox["k", 
+       RowBox[{"a", "+", "1"}]]}], " ", "..."}], " ", 
+    SubscriptBox["k", "N"]}], TraditionalForm]],ExpressionUUID->
+  "b1cdeb93-d7f1-45e7-ac01-f6873c379644"],
+ " and, so, every column except ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ " appears in ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        FormBox[
+         SubscriptBox["g", 
+          RowBox[{"1", " ", 
+           SubscriptBox["k", "1"]}]],
+         TraditionalForm], "..."}], 
+       FormBox[
+        SubscriptBox["g", 
+         RowBox[{"a", "-", 
+          RowBox[{"1", " ", 
+           SubscriptBox["k", 
+            RowBox[{"a", "-", "1"}]]}]}]],
+        TraditionalForm], " ", 
+       FormBox[
+        SubscriptBox["g", 
+         RowBox[{"a", "+", 
+          RowBox[{"1", " ", 
+           SubscriptBox["k", 
+            RowBox[{"a", "+", "1"}]]}]}]],
+        TraditionalForm]}], "..."}], 
+     FormBox[
+      SubscriptBox["g", 
+       RowBox[{"N", " ", 
+        SubscriptBox["k", "N"]}]],
+      TraditionalForm]}]}], TraditionalForm]],ExpressionUUID->
+  "21f39700-e32a-4ca8-b03c-6ef3a5d1b96f"],
+ ". So far, so good. (Note that ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ " must appear in the superscript of \[Epsilon] because the Levi-Civita \
+symbol is only defined for strings of length ",
+ StyleBox["N",
+  FontSlant->"Italic"],
+ ").\n\nIs ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ " in a superscript position that will produce the correct sign for the term \
+\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"1", " ", 
+     SubscriptBox["k", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "c7b54691-cb29-49e1-9cab-c9dfaca2aa46"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "-", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"a", "-", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "197a9cc5-cd21-4609-a706-93e5dfe13a2f"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "+", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"a", "+", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "ed3316dd-33c4-47b6-a9db-9ec31ac6c206"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "1eecdac7-9a9a-440d-8ce7-a155ae7bb033"],
+ "? Consider the case where ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "1"], TraditionalForm]],ExpressionUUID->
+  "d9f06a96-300d-47af-a4e4-cfd03629d6de"],
+ "=1, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "2"], TraditionalForm]],ExpressionUUID->
+  "b85bef4a-a327-4252-9cf0-8b80f1e047f9"],
+ "=2, .... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "N"], TraditionalForm]],ExpressionUUID->
+  "80c806d9-8694-413f-8f3d-5da12f33133c"],
+ "=",
+ StyleBox["N.",
+  FontSlant->"Italic"],
+ " Then we have   ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"1", " ", "..."}], "a"}], "-", 
+       RowBox[{"1", " ", "b", "  ", "a"}], "+", "1"}], " ", "..."}], " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "8a8fa26c-df82-48b1-b4c1-b26917618e3c"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", "11"], TraditionalForm]],ExpressionUUID->
+  "d2dfa5fd-584b-42d5-a2b1-11b94e2324eb"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "-", 
+     RowBox[{"1", " ", "a"}], "-", "1"}]], TraditionalForm]],ExpressionUUID->
+  "1bddcca3-2291-4bdb-b153-469d0284f3e0"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "+", 
+     RowBox[{"1", " ", "a"}], "+", "1"}]], TraditionalForm]],ExpressionUUID->
+  "5913552d-f296-4197-acca-4cad2d52e667"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", "N"}]], TraditionalForm]],ExpressionUUID->
+  "a5d43046-efa6-4cbf-a829-3801f97b0987"],
+ ", and the correct sign should be +1. Note that ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ " is in the ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ "th",
+ StyleBox[" ",
+  FontSlant->"Italic"],
+ "position of the superscript. If we put it in the ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ "th position, then we would have ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        StyleBox["\"\<\>",
+         FontSize->9,
+         FontWeight->"Regular",
+         FontColor->RGBColor[
+          0.9999694819562066, 0.9999237048905165, 0.9999694819562066]], "1", 
+        " ", "2"}], "..."}], 
+      StyleBox["b",
+       FontSlant->"Italic"]}], "\[Dash]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"1", 
+         StyleBox["b",
+          FontSlant->"Italic"], " ", 
+         StyleBox["b",
+          FontSlant->"Italic"]}], "+", "1"}], "..."}], " ", 
+      StyleBox["N",
+       FontSlant->"Italic"]}]}]], TraditionalForm]],ExpressionUUID->
+  "d8d146f3-2fa1-4123-9d05-fd39bf2879ba"],
+ " = +1. It requires |",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ "\[Dash]",
+ StyleBox["a|",
+  FontSlant->"Italic"],
+ " index swaps to move ",
+ StyleBox["b ",
+  FontSlant->"Italic"],
+ "from position ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ " to position ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ ". So, ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"1", " ", "..."}], "a"}], "-", 
+       RowBox[{"1", " ", "b", "  ", "a"}], "+", "1"}], " ", "..."}], " ", 
+     "N"}]], TraditionalForm]],ExpressionUUID->
+  "ce941ad7-0441-498c-8ac7-4160f6cf3512"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}], 
+    RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
+  "c97f6e2d-75d9-4626-ab0a-c7082a401f1d"],
+ ". In order to give ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", "11"], TraditionalForm]],ExpressionUUID->
+  "3a62e685-3acf-44e2-a272-0b5955308b7e"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "-", 
+     RowBox[{"1", " ", "a"}], "-", "1"}]], TraditionalForm]],ExpressionUUID->
+  "3be432cf-3f02-4900-b9f0-e99e5e6db5f6"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "+", 
+     RowBox[{"1", " ", "a"}], "+", "1"}]], TraditionalForm]],ExpressionUUID->
+  "f743b8a4-ea15-4fc8-a927-891f1bdf4d60"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", "N"}]], TraditionalForm]],ExpressionUUID->
+  "5c867c24-0950-42b5-9024-f5d03b096730"],
+ " a coefficient of +1, we must precede it by ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}], 
+    RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
+  "d2285764-ca9b-4b4b-8a1e-9f1d7461fb87"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"1", " ", "..."}], "a"}], "-", 
+       RowBox[{"1", " ", "b", "  ", "a"}], "+", "1"}], " ", "..."}], " ", 
+     "N"}]], TraditionalForm]],ExpressionUUID->
+  "67dc6a6f-d323-4903-8c7c-9db2305f5710"],
+ ". So, we must modify our first attempt. We try\n\t",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["c", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "2167856e-fa68-4c1b-9a7b-0e557e65ca2c"],
+ " \[Congruent] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}], 
+    RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
+  "1a5ab073-d343-40ae-8b45-331ca30d62b1"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SubscriptBox["k", "1"], " ", "..."}], 
+       SubscriptBox["k", 
+        RowBox[{"a", "-", "1"}]], " ", "b", "  ", 
+       SubscriptBox["k", 
+        RowBox[{"a", "+", "1"}]]}], " ", "..."}], " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "c02eb7b3-b272-4f8e-9b28-ae9f0c0ce839"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"1", " ", 
+     SubscriptBox["k", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "eabc0d3e-85b7-4d7f-819e-2561b51748e9"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "-", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"a", "-", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "961b17c7-2809-4ee9-ad2d-80acafc10819"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "+", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"a", "+", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "5a88109a-f48c-43af-b4cb-b0cd6cf4dbbd"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "159f4688-99e4-4392-8444-e6b55b81581a"],
+ ".\n\nThis expression has the correct sign as well as the correct rows and \
+columns for the cofactor ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["c", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "bdffcdf0-3e93-4fa2-94d9-8f8d2ab7dd1a"],
+ ". However, in proper tensor notation, when ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ " and ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ " are superscripts on LHS then they must be superscripts on RHS, but ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ " is only a subscript on RHS. We can\[CloseCurlyQuote]t remedy this with \
+just a Kronecker delta, but a summation sign along with a Kronecker delta \
+works as follows:\n\t ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["c", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "c8e89648-02c7-47cb-8d10-358f0bd769ee"],
+ " \[Congruent] (-1",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
+  "9ff9310d-61b1-4ce4-8a7f-40a0b55d6592"],
+ Cell[BoxData[
+  FormBox[
+   UnderoverscriptBox["\[CapitalSigma]", 
+    RowBox[{"s", "=", "1"}], "N"], TraditionalForm]],ExpressionUUID->
+  "67b6755b-13c5-41e4-ac6c-87678204532c"],
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["\[Delta]", 
+    RowBox[{"s", "  "}], "a"], TraditionalForm]],ExpressionUUID->
+  "2e18d65f-7e0d-449f-9200-251fd9116ec8"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SubscriptBox["k", "1"], " ", "..."}], 
+       SubscriptBox["k", 
+        RowBox[{"s", "-", "1"}]], " ", "b", "  ", 
+       SubscriptBox["k", 
+        RowBox[{"s", "+", "1"}]]}], " ", "..."}], " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "4aa46e55-f43d-42d8-bc9f-9551a14de557"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"1", " ", 
+     SubscriptBox["k", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "d92b4b3b-7d99-44ca-a569-83080dd856ff"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"s", "-", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"s", "-", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "b10c1c54-403d-4eed-9100-b177ce28a6fe"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"s", "+", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"s", "+", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "2d101002-abf6-44b0-bb00-05c0725d9b59"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "ac5c4bc0-22cd-4544-a3a6-9f7ad202ad91"],
+ ".\t\t     (e)\nIn this summation we throw away all terms except when ",
+ StyleBox["s",
+  FontSlant->"Italic"],
+ " = ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ ", making this identical to the prior expression while adhering to the \
+Einstein summation convention.\t\n\n",
+ StyleBox["Example",
+  FontColor->RGBColor[0, 0, 1]],
+ "  To illustrate cofactor definition (e), let ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ " = 3, ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ " = 5, and ",
+ StyleBox["N",
+  FontSlant->"Italic"],
+ " = 7. Then we replace the sum by letting ",
+ StyleBox["s",
+  FontSlant->"Italic"],
+ " = 3:\n\t ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["c", 
+    "\!\(\*StyleBox[\"\\\"\",FontSize->9,FontWeight->\"Regular\",FontColor->\
+RGBColor[0.9999694819562066, 0.9999237048905165, 0.9999694819562066]]\)3 \
+5\>"], TraditionalForm]],ExpressionUUID->
+  "58c77273-fa02-45e7-a1f4-af7bbc6b9422"],
+ " \[Congruent] (-1",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{"5", "-", "3"}]], TraditionalForm]],ExpressionUUID->
+  "1d693d51-b348-4c0e-87e9-548e3d7d4f38"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       SubscriptBox["k", "1"], "  ", 
+       SubscriptBox["k", "2"], "  ", "5", "   ", 
+       SubscriptBox["k", "4"]}], " ", "..."}], "  ", 
+     SubscriptBox["k", "7"]}]], TraditionalForm]],ExpressionUUID->
+  "3e085ed4-768a-413c-ad94-d892d7dd5408"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"1", " ", 
+     SubscriptBox["k", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "f59f0204-7c12-4ea6-8500-a2c79572b0ca"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"2", " ", 
+     SubscriptBox["k", "2"]}]], TraditionalForm]],ExpressionUUID->
+  "8920f076-8ee7-4baa-9982-669c2cf4b1d6"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"4", " ", 
+     SubscriptBox["k", "4"]}]], TraditionalForm]],ExpressionUUID->
+  "10ea958c-ed16-4bd6-a6b1-a556006573eb"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"7", " ", 
+     SubscriptBox["k", "7"]}]], TraditionalForm]],ExpressionUUID->
+  "895d03dc-50db-4fea-a4b8-ae96b96ed1b1"],
+ ".\n\nEinstein summation occurs over every ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "a"], TraditionalForm]],ExpressionUUID->
+  "978f2558-b714-4443-bc38-bb6980e93586"],
+ " except ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "3"], TraditionalForm]],ExpressionUUID->
+  "74f38d8f-8024-4ec4-a186-670bf6a4bd72"],
+ " and so includes sequences with repeated numbers, but the only non-zero \
+values of \[Epsilon] are when the ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "a"], TraditionalForm]],ExpressionUUID->
+  "5ccbe1e5-0059-4faf-af45-b5017d3c590f"],
+ "\[CloseCurlyQuote]s include one each of the values 1, 2, 3, 4, 6, 7 in any \
+order. Thus, as desired, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"1", " ", 
+     SubscriptBox["k", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "ce97c78f-29fd-46f8-be47-deac21578ea4"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"2", " ", 
+     SubscriptBox["k", "2"]}]], TraditionalForm]],ExpressionUUID->
+  "0aa9b738-4e76-4b93-bd93-9ff66dfd0825"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"4", " ", 
+     SubscriptBox["k", "4"]}]], TraditionalForm]],ExpressionUUID->
+  "a971345a-baf8-486b-9ce7-4c0491dabc8d"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"7", " ", 
+     SubscriptBox["k", "7"]}]], TraditionalForm]],ExpressionUUID->
+  "14cfb846-8d44-4925-9185-6c0c5edfd33c"],
+ " pairs every possible column with every possible row, excluding row 3 and \
+column 5. \n\nThis expression is preceded by ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}], "2"], TraditionalForm]],ExpressionUUID->
+  "5b4d1c2a-7b4c-4cdd-bffb-5a211a1395ec"],
+ " = +1 because the number of pairwise swaps for ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ "=",
+ "5 to be the fifth superscript differs by two swaps from it being the 3rd \
+superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
+  "3c88b9a3-cf03-4ec3-916a-16c0feea4e50"],
+ "\[CapitalDelta] from equation (d), which we re-express here:\n\t\
+\[CapitalDelta] \[Congruent] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["k", "1"], " ", "..."}], " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "ae8ec0db-0b3a-41c6-8e2e-95a59da9628b"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"1", " ", 
+     SubscriptBox["k", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "65ab82fe-cff8-45e8-b43b-287522649f12"],
+ "...",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "-", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"a", "-", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "0412d174-f057-4ba9-8153-c47ada9879c3"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", 
+     SubscriptBox["k", "a"]}]], TraditionalForm]],ExpressionUUID->
+  "ca579b21-b0cb-4cb9-9dfb-f9c29481d477"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "+", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"a", "+", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "f00801be-69d3-4596-81a8-573dbbc422de"],
+ "... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "c80b9494-2662-411e-b41b-9440978fdd77"],
+ ". \t\t\t\t\t\t     (f)  \n\nThen\n\t",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
+  "bedfbaff-cccd-4577-a82f-42e26b794ff7"],
+ "\[CapitalDelta]  =  ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
+  "e325d86e-9568-4046-a1d9-fdd760f30df3"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"1", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "bb6de388-ab59-4a8b-b2d4-fa9da591de57"],
+ " (-1",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{"b", "-", "1"}]], TraditionalForm]],ExpressionUUID->
+  "0a5a2edf-ca3b-456c-9063-0f455a7354f6"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"b", " ", 
+       SubscriptBox["k", "2"]}], "..."}], " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "293cea6f-39d4-4759-858e-5619a89ad342"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"2", " ", 
+     SubscriptBox["k", "2"]}]], TraditionalForm]],ExpressionUUID->
+  "7488ee2b-b266-47ec-b846-786a569e33c9"],
+ "... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "b1f8753f-0692-4d55-86b8-f78999e95621"],
+ " + ... \n\t\t+\.10 ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
+  "14060b8e-d477-4cdf-b3da-7a124fd2480b"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "1d873364-6903-4aa2-b372-27e4ce12aa1a"],
+ " (-1",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
+  "9bb39567-5488-4fa4-834b-9c4f05d7de52"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SubscriptBox["k", "1"], "..."}], 
+       SubscriptBox["k", 
+        RowBox[{"a", "-", "1"}]], " ", "b", "  ", 
+       SubscriptBox["k", 
+        RowBox[{"a", "+", "1"}]]}], "..."}], " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "de43df4b-987c-4433-98fd-1ea744fa34d9"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"1", " ", 
+     SubscriptBox["k", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "0b3cc0ed-9c6e-462d-8eca-5312cfa2b922"],
+ "...",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "-", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"a", "-", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "fcdc447b-8ae3-41d5-8869-a92983f48c4a"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "+", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"a", "+", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "f9c93d72-2c00-4a14-bcf7-d41069e897a1"],
+ "... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "e6e86037-6d04-497f-8f2e-113f2a575489"],
+ " + ... \n\t\t+  ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
+  "61e5ed2d-08d7-4a2e-ac48-8bfdf504486e"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "ef5a1155-2067-4d89-87dc-c541c76966bf"],
+ " (-1",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{"b", "-", "N"}]], TraditionalForm]],ExpressionUUID->
+  "73b02a3f-0a75-4e93-9847-beb46fd91464"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["k", "1"], "..."}], " ", 
+     SubscriptBox["k", 
+      RowBox[{"N", "-", "1"}]], " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "ed371c2c-4548-40a3-9903-930a51b539ec"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"1", " ", 
+     SubscriptBox["k", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "89e540c2-1f24-4504-89d3-b0a4742f1740"],
+ "... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", "-", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"N", "-", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "e47adc33-8714-4a7a-92ad-de6f1064af44"],
+ "\t\t\n\t\t=",
+ Cell[BoxData[
+  FormBox[
+   UnderoverscriptBox["\[CapitalSigma]", 
+    RowBox[{"s", "=", "1"}], "N"], TraditionalForm]],ExpressionUUID->
+  "0b2fd747-e65e-48af-832d-7a0e865356f6"],
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["\[Delta]", 
+    RowBox[{"s", "  "}], "a"], TraditionalForm]],ExpressionUUID->
+  "6cad44df-8e95-4439-9b46-9bd5215c39c5"],
+ "(-1",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{"b", "-", "s"}]], TraditionalForm]],ExpressionUUID->
+  "cd49fed0-a53c-4891-a1e1-a27870900153"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
+  "2739a464-3176-4fce-8c19-9d16319585fa"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"s", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "186493fc-91e4-4709-86cb-0719cdaa37ea"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SubscriptBox["k", "1"], "..."}], 
+       SubscriptBox["k", 
+        RowBox[{"s", "-", "1"}]], " ", "b", "  ", 
+       SubscriptBox["k", 
+        RowBox[{"s", "+", "1"}]]}], "..."}], " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "f24dbf73-6452-4d69-b300-e2fbb843cc51"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"1", " ", 
+     SubscriptBox["k", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "c2d9391a-5d26-41a7-b194-f85f1071116d"],
+ "...",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"s", "-", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"s", "-", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "597f30b0-2b9c-4aef-bec9-3dd2449087a7"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"s", "+", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"s", "+", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "a90723f6-79fb-43fe-bc67-3f5bd36769dd"],
+ "... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "b60f08f2-2674-49a4-a101-d67f8f44d7b8"],
+ ".\t     (g)\n\n\nTo see that we need the factor ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}], 
+    RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
+  "ecc1cd4f-1047-4dd0-a5d2-88f558311c09"],
+ " in equation (g), again consider\n ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "1"], TraditionalForm]],ExpressionUUID->
+  "5e197209-77fe-44cd-b9f4-d43f8678613a"],
+ "=1, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "2"], TraditionalForm]],ExpressionUUID->
+  "b6e3d9de-fa33-44e1-8352-21a274fa4ee8"],
+ "=2, ..., ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "N"], TraditionalForm]],ExpressionUUID->
+  "b911569d-0136-446f-aee6-8da075398cf1"],
+ "=",
+ StyleBox["N",
+  FontSlant->"Italic"],
+ ". Then \n\t",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SubscriptBox["k", "1"], "..."}], 
+       SubscriptBox["k", 
+        RowBox[{"a", "-", "1"}]], " ", "b", "  ", 
+       SubscriptBox["k", 
+        RowBox[{"a", "+", "1"}]]}], "..."}], " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "d6b35985-62b0-4287-ab26-d54b3873c3be"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"1", " ", 
+     SubscriptBox["k", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "c76679f8-978b-4777-bafd-5bf5dfa369c9"],
+ "...",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "-", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"a", "-", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "d3b81cb8-5b6f-4f9d-8289-3e9afa01b060"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", 
+     SubscriptBox["k", "a"]}]], TraditionalForm]],ExpressionUUID->
+  "cdd7d2e5-b9f3-4447-b7b8-838a7ab34b78"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "+", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"a", "+", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "3766e17a-f7b5-4282-b2c6-d44e3d10da1c"],
+ "... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "93f179e2-ee0f-4916-bb82-18641d479d29"],
+ " \n\t= ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"1", " ", "..."}], "a"}], "-", 
+       RowBox[{"1", " ", "b", "  ", "a"}], "+", "1"}], " ", "..."}], " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "a241b835-7f54-4492-a808-8bda889d8ae8"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", "11"], TraditionalForm]],ExpressionUUID->
+  "01fc6a1d-0ccb-47a0-8a1b-f6ad5fb2cd0a"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "-", 
+     RowBox[{"1", " ", "a"}], "-", "1"}]], TraditionalForm]],ExpressionUUID->
+  "a6fa38f4-68be-4fe4-af73-aa25f680dfa8"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "a"}]], TraditionalForm]],ExpressionUUID->
+  "9e8ca00c-707b-49c1-943b-155ede361d0c"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", "+", 
+     RowBox[{"1", " ", "a"}], "+", "1"}]], TraditionalForm]],ExpressionUUID->
+  "f28f1fd4-6373-4313-bb8f-e0a5597930ed"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", "N"}]], TraditionalForm]],ExpressionUUID->
+  "9ae1736b-3a18-457b-9a85-4b94b079677e"],
+ ".\n\nThe correct sign for this term is +1, so, in order to move superscript \
+",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ " to position ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ " from position ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ ", the factor (-1",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
+  "4187d532-04fc-487c-ac31-1c4da3f8806c"],
+ " is needed.\n\nWe can simplify equation (g) by moving ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
+  "491c6ae8-1f07-4c67-8a58-904d51fb6608"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"s", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "a8575b33-bbb2-4c63-af73-97cb310612d6"],
+ " (-1",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{"b", "-", "s"}]], TraditionalForm]],ExpressionUUID->
+  "ae7504a9-06c3-4a50-80e3-800b7d05b00c"],
+ " to the left of the summation sign. It becomes ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
+  "14fe161a-a0f1-4d1b-84e7-d1805e752746"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "ab79587c-bfc0-4e20-a840-f43148b8cc71"],
+ " (-1",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
+  "98b31d63-1f4a-41b8-a8fe-7599c645cc06"],
+ " since the summations are all zero except when \n",
+ StyleBox["s",
+  FontSlant->"Italic"],
+ " = ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ ", and this completes the solution:",
+ " \n\t",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
+  "4d54124c-6c26-4515-b24b-f2af6fd32c0a"],
+ "\[CapitalDelta]  = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
+  "94fab420-f863-474c-9559-88b9bd743a17"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "7ff3a5a8-5e81-4516-ab6b-2cb36becc7db"],
+ " (-1",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
+  "1e7d636d-23e5-4976-9a91-2c4a05771a3c"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   UnderoverscriptBox["\[CapitalSigma]", 
+    RowBox[{"s", "=", "1"}], "N"], TraditionalForm]],ExpressionUUID->
+  "2a33b751-4f63-48c5-8cc9-e12e14186a00"],
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["\[Delta]", 
+    RowBox[{"s", "  "}], "a"], TraditionalForm]],ExpressionUUID->
+  "077c840d-be25-498e-9f24-ac544b1753f2"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SubscriptBox["k", "1"], "..."}], 
+       SubscriptBox["k", 
+        RowBox[{"b", "-", "1"}]], " ", "b", "  ", 
+       SubscriptBox["k", 
+        RowBox[{"b", "+", "1"}]]}], "..."}], " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "9f5c37f9-14f6-402f-9abc-60dcb513b8f4"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"1", " ", 
+     SubscriptBox["k", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "eba7d238-d81e-4f5c-a124-cfd77d855120"],
+ "...",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"s", "-", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"s", "-", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "db558f1a-8918-4274-8806-667950c36569"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"s", "+", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"s", "+", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "98726e8a-78e3-403a-a100-bf37d815475c"],
+ "... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "76c890b2-eb3b-41d8-91e4-d8de8e8ee108"],
+ "\n\t\t",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    OverscriptBox["=", 
+     RowBox[{"(", "e", ")"}]],
+    FontColor->GrayLevel[0]], TraditionalForm]],
+  FontColor->RGBColor[1, 0, 0],ExpressionUUID->
+  "26223a1c-2447-4d60-86af-cda56a4fd3d3"],
+ "  ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
+  "18a8f6e1-113b-4635-84db-781b33610756"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "b5532cc6-3ee9-4e90-94d3-9d93cbca21fe"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["c", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "344a0cd2-0338-4ac8-9e3a-010c538da66b"],
+ "\t\t\[Checkmark]\n\t\t",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    OverscriptBox["=", 
+     RowBox[{"(", 
+      StyleBox["c",
+       FontSlant->"Plain"], ")"}]],
+    FontColor->GrayLevel[0]], TraditionalForm]],
+  FontColor->RGBColor[1, 0, 0],ExpressionUUID->
+  "59db6c6e-5ea4-40c3-b577-806842a3e1ea"],
+ "  \[CapitalDelta] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "d8f49195-04dc-4e12-abac-36aabd147212"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
+  "0454772d-3e4b-4b40-8100-a24e6aa01927"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
+  "22e25540-c495-45b9-a6de-0dda948f5035"],
+ "\t\[Checkmark]\n\n"
+}], "Text",
+ CellChangeTimes->{{3.8319058666689034`*^9, 3.8319058756679564`*^9}, {
+   3.8319059509257*^9, 3.831906041881379*^9}, {3.8319060804704723`*^9, 
+   3.8319061087092953`*^9}, {3.831906396606841*^9, 3.831906528438315*^9}, {
+   3.831906558591691*^9, 3.8319067991239777`*^9}, {3.831906830939404*^9, 
+   3.831907024895912*^9}, {3.83190705983953*^9, 3.8319071103332853`*^9}, {
+   3.831907161003784*^9, 3.831907184314104*^9}, 3.831908366438983*^9, {
+   3.853011460392441*^9, 3.8530114669852324`*^9}, {3.85301327022572*^9, 
+   3.853013330297258*^9}, {3.853013371143449*^9, 3.853013647400507*^9}, {
+   3.853013712316646*^9, 3.85301372522171*^9}, {3.853013773720171*^9, 
+   3.853013822788136*^9}, {3.853013865878624*^9, 3.853013870343278*^9}, {
+   3.8530139208964033`*^9, 3.853013942289958*^9}, {3.8530139730165367`*^9, 
+   3.853014009036954*^9}, {3.853014043526792*^9, 3.853014156939446*^9}, {
+   3.853014188648391*^9, 3.853014257342795*^9}, {3.853014327862484*^9, 
+   3.853014374787757*^9}, {3.853014409205049*^9, 3.8530145099789267`*^9}, {
+   3.853014541406369*^9, 3.853014581921876*^9}, {3.8530146147810173`*^9, 
+   3.85301462014364*^9}, {3.853014684376574*^9, 3.853014817081974*^9}, {
+   3.85301487718329*^9, 3.853014924185821*^9}, {3.853014970362136*^9, 
+   3.8530149819219303`*^9}, {3.853015025335802*^9, 3.85301525994799*^9}, {
+   3.8530154213393393`*^9, 3.853015551099022*^9}, {3.8530156309799433`*^9, 
+   3.8530157490137577`*^9}, {3.853015832024591*^9, 3.853016001757688*^9}, {
+   3.853016048100739*^9, 3.8530160679825907`*^9}, {3.853016099622251*^9, 
+   3.853016218935643*^9}, {3.853016274086129*^9, 3.853016348068556*^9}, {
+   3.853016389022273*^9, 3.8530164772313547`*^9}, {3.853016514623377*^9, 
+   3.853016548238418*^9}, {3.853016582192256*^9, 3.853016621553063*^9}, {
+   3.853016866912418*^9, 3.853016887536278*^9}, {3.853016944554144*^9, 
+   3.8530170540205297`*^9}, {3.853017086169758*^9, 3.85301745566173*^9}, {
+   3.853017513615342*^9, 3.853017647770863*^9}, {3.8530177073410997`*^9, 
+   3.8530178345303583`*^9}, {3.853017902382907*^9, 3.8530179319191847`*^9}, {
+   3.853018012693303*^9, 3.85301809190298*^9}, {3.853018160485764*^9, 
+   3.853018246229703*^9}, {3.85301829560926*^9, 3.8530188378243*^9}, {
+   3.8530188706102057`*^9, 3.853019041758751*^9}, {3.853019180054566*^9, 
+   3.85301918277967*^9}, {3.8530192286914062`*^9, 3.853019258649458*^9}, {
+   3.853058269995215*^9, 3.853058287186475*^9}, {3.853058598595868*^9, 
+   3.853058621228209*^9}, {3.85305869230348*^9, 3.8530588490623198`*^9}, {
+   3.853058882960144*^9, 3.8530589704339437`*^9}, {3.853059004019065*^9, 
+   3.8530590732979927`*^9}, {3.8530591444351997`*^9, 
+   3.8530591608841476`*^9}, {3.853059196569401*^9, 3.853059203889023*^9}, {
+   3.853059241858157*^9, 3.853059275945663*^9}, {3.853059350831621*^9, 
+   3.853059394518964*^9}, {3.853059447039674*^9, 3.853059554771884*^9}, {
+   3.8530595921377487`*^9, 3.853059598375189*^9}, {3.853059643309721*^9, 
+   3.853059647162628*^9}, {3.8530596879025593`*^9, 3.8530597681355753`*^9}, {
+   3.85305979822198*^9, 3.853059840272501*^9}, {3.8530598778288717`*^9, 
+   3.8530600987094393`*^9}, {3.8530622243228683`*^9, 3.853062290429037*^9}, {
+   3.8530623977356577`*^9, 3.853062400426993*^9}, {3.8530624401892233`*^9, 
+   3.853062503309317*^9}, {3.85306268102446*^9, 3.8530626878005543`*^9}, {
+   3.853062719506522*^9, 3.85306278648118*^9}, {3.853065429330014*^9, 
+   3.853065590381515*^9}, {3.8530656378971443`*^9, 3.853065643224826*^9}, {
+   3.853065699691258*^9, 3.853065716695355*^9}, {3.853065902257634*^9, 
+   3.853065902778216*^9}, {3.853066002341887*^9, 3.8530660205542173`*^9}, {
+   3.85306610966569*^9, 3.853066283707388*^9}, {3.853066335299183*^9, 
+   3.853066354884591*^9}, {3.853066450104968*^9, 3.8530664690456133`*^9}, {
+   3.853066574175768*^9, 3.853066594771525*^9}, {3.853066638817793*^9, 
+   3.853066664491372*^9}, {3.8530667408941727`*^9, 3.853066751290515*^9}, {
+   3.853066815520602*^9, 3.8530668531341057`*^9}, {3.853066897149996*^9, 
+   3.853067041066486*^9}, {3.8530670716317177`*^9, 3.8530670953292933`*^9}, {
+   3.853067136609589*^9, 3.853067144578616*^9}, {3.853067181727436*^9, 
+   3.8530671930102243`*^9}, {3.853067348203636*^9, 3.853067518171528*^9}, {
+   3.853099577781002*^9, 3.853099687558806*^9}, {3.8531002106618843`*^9, 
+   3.853100210988185*^9}, {3.8531002496735983`*^9, 3.853100256355345*^9}, {
+   3.853100301457451*^9, 3.853100913097396*^9}, {3.853101006376836*^9, 
+   3.8531010497841673`*^9}, {3.853101094210203*^9, 3.853101109848032*^9}, {
+   3.853101141140307*^9, 3.8531012641000357`*^9}, {3.853101315019129*^9, 
+   3.8531014662314653`*^9}, {3.853101539746069*^9, 3.853101560555831*^9}, {
+   3.853102722154543*^9, 3.8531027348052883`*^9}, {3.8531027997043333`*^9, 
+   3.853102807297757*^9}, 3.853102870722251*^9, {3.853103016941121*^9, 
+   3.853103024006625*^9}, {3.853103119182225*^9, 3.853103131120264*^9}, {
+   3.853103195367545*^9, 3.853103199446443*^9}, {3.853103260926618*^9, 
+   3.8531032646836557`*^9}, {3.8531033213409243`*^9, 3.853103328252678*^9}, {
+   3.8531033769725227`*^9, 3.853103396955653*^9}, {3.853103519051054*^9, 
+   3.85310353360139*^9}, {3.853103590619793*^9, 3.853103612542523*^9}, {
+   3.853103900113327*^9, 3.853103944545988*^9}, {3.853103985321639*^9, 
+   3.853104017965972*^9}, {3.8531040551230097`*^9, 3.853104062661365*^9}, {
+   3.853104096001848*^9, 3.8531041878418922`*^9}, {3.853104225303977*^9, 
+   3.853104259250257*^9}, {3.853104290586288*^9, 3.853104348863636*^9}, {
+   3.853104403091283*^9, 3.853104470613146*^9}, {3.853104531625513*^9, 
+   3.853104558138138*^9}, 3.853104593158525*^9, {3.853104695112075*^9, 
+   3.8531049230946417`*^9}, {3.85310496256708*^9, 3.853104999154413*^9}, {
+   3.853105037339785*^9, 3.85310510738796*^9}, {3.853105151104559*^9, 
+   3.8531054405598593`*^9}, {3.8531055862708797`*^9, 3.853105590249737*^9}, {
+   3.853105650281316*^9, 3.853105797064131*^9}, {3.853105869774321*^9, 
+   3.853105943714086*^9}, {3.853106114279192*^9, 3.853106144470454*^9}, {
+   3.853106341110992*^9, 3.853106346275518*^9}, {3.8531065214516373`*^9, 
+   3.8531066251985893`*^9}, {3.853149122083939*^9, 3.853149212429227*^9}, {
+   3.853149252156515*^9, 3.853149309269643*^9}, {3.853149345845194*^9, 
+   3.853149480561376*^9}, {3.853149519618657*^9, 3.853149984086718*^9}, {
+   3.85315002944048*^9, 3.853150062666069*^9}, {3.8531501231787567`*^9, 
+   3.853150206511471*^9}, {3.8531502455282373`*^9, 3.853150456028775*^9}, {
+   3.853150508505765*^9, 3.853150573661502*^9}, {3.853150676149036*^9, 
+   3.853150713169376*^9}, {3.853150749226179*^9, 3.853150760055683*^9}, {
+   3.853150846560704*^9, 3.853150862220961*^9}, {3.8531509656984262`*^9, 
+   3.853150966376689*^9}, {3.853151010825186*^9, 3.853151029377141*^9}, {
+   3.853151065133662*^9, 3.853151069959392*^9}, {3.8531511255073767`*^9, 
+   3.8531511695995092`*^9}, {3.853151272851856*^9, 3.853151354030385*^9}, {
+   3.8531513888896513`*^9, 3.853151480229568*^9}, {3.853151514464117*^9, 
+   3.8531515152874117`*^9}, {3.8531550796766987`*^9, 
+   3.8531553199597816`*^9}, {3.853155556255171*^9, 3.853155660025269*^9}, {
+   3.853155709209467*^9, 3.8531560804228687`*^9}, {3.85315680985299*^9, 
+   3.853156845794448*^9}, {3.85315687943592*^9, 3.853156914409896*^9}, {
+   3.8531595465075083`*^9, 3.853159657346663*^9}, {3.853159751702849*^9, 
+   3.853159933142991*^9}, {3.853160071327582*^9, 3.853160071329732*^9}, {
+   3.853160116043667*^9, 3.853160269011065*^9}, {3.853160357187298*^9, 
+   3.853160481801302*^9}, {3.853160593412035*^9, 3.8531606267256603`*^9}, {
+   3.8531606664637938`*^9, 3.853160935152301*^9}, {3.853160973457868*^9, 
+   3.853160974836173*^9}, 3.8531610291569767`*^9, {3.853161061403672*^9, 
+   3.853161120775778*^9}, {3.8531696521595573`*^9, 3.8531696528725033`*^9}, {
+   3.853170664487383*^9, 3.853170740162939*^9}, {3.8531708086865273`*^9, 
+   3.853170829339769*^9}, {3.853172817875778*^9, 3.8531728852492723`*^9}, {
+   3.853172935570307*^9, 3.85317294475107*^9}, {3.853173127130239*^9, 
+   3.853173284842217*^9}, {3.853173320488722*^9, 3.853173326806131*^9}, {
+   3.853173362389021*^9, 3.8531735798667994`*^9}, {3.8531737329212112`*^9, 
+   3.853173760892796*^9}, {3.853173798201742*^9, 3.853173807495469*^9}, {
+   3.8531739147679777`*^9, 3.8531739155646753`*^9}, {3.85317425537934*^9, 
+   3.853174351166237*^9}, {3.853174797201207*^9, 3.853174797204195*^9}, {
+   3.853174876327395*^9, 3.853174880728664*^9}, 3.85317506899249*^9, 
+   3.853175110376727*^9, 3.853175170081439*^9, {3.853175202117222*^9, 
+   3.853175358832958*^9}, {3.8531755135529222`*^9, 3.853175513555813*^9}, {
+   3.853175750407728*^9, 3.853175770586631*^9}, {3.853175925460876*^9, 
+   3.853175925464048*^9}, 3.8531859358739767`*^9, {3.853186265697762*^9, 
+   3.8531862717742653`*^9}, {3.853186928114571*^9, 3.853186932243094*^9}, {
+   3.853187025461141*^9, 3.853187025464381*^9}, {3.853187107236264*^9, 
+   3.853187260833932*^9}, {3.853187368508069*^9, 3.8531874321357307`*^9}, {
+   3.8531876491673813`*^9, 3.853187687957357*^9}, {3.85318825019418*^9, 
+   3.8531883481083117`*^9}, {3.853188383053412*^9, 3.853188487856781*^9}, {
+   3.853188557342772*^9, 3.853188631066139*^9}, {3.853188893719141*^9, 
+   3.8531889012693167`*^9}, {3.853189101035709*^9, 3.853189127115101*^9}, 
+   3.853189174009437*^9, {3.8531892345617228`*^9, 3.853189234565659*^9}, {
+   3.853189276070969*^9, 3.853189326997693*^9}, 3.853189398080192*^9, {
+   3.8531894769757957`*^9, 3.8531895243108377`*^9}, {3.853189561056315*^9, 
+   3.85318961408466*^9}, {3.853189669649338*^9, 3.853189741567933*^9}, {
+   3.853189772601604*^9, 3.853189868947008*^9}, {3.853189920322156*^9, 
+   3.853189951622181*^9}, 3.853189992976177*^9, {3.853190023478663*^9, 
+   3.853190059551456*^9}, {3.8531901055271273`*^9, 3.853190207712582*^9}, {
+   3.853190471292153*^9, 3.853190515294511*^9}, {3.853190563966071*^9, 
+   3.853190649733951*^9}, {3.853190689755986*^9, 3.853190737904129*^9}, {
+   3.853190780835392*^9, 3.8531908806052322`*^9}, {3.853190923741045*^9, 
+   3.8531910196497173`*^9}, {3.853191177578134*^9, 3.853191251137958*^9}, {
+   3.853191291963125*^9, 3.853191321981073*^9}, {3.8531913646814833`*^9, 
+   3.853191389960444*^9}, {3.8531914304483747`*^9, 3.85319143738068*^9}, 
+   3.853191510843391*^9, {3.853191553811688*^9, 3.853191553815012*^9}, {
+   3.853191588985427*^9, 3.853191588988874*^9}, {3.8531916431856213`*^9, 
+   3.853191654215905*^9}, {3.853191685382859*^9, 3.853191724079558*^9}, {
+   3.8532345606530113`*^9, 3.853234570390635*^9}, {3.853234604645327*^9, 
+   3.853234630754043*^9}, {3.853234660900717*^9, 3.8532346778321047`*^9}, 
+   3.8532366095608473`*^9, {3.853237399303505*^9, 3.853237400110702*^9}, {
+   3.853237490187201*^9, 3.8532374901907463`*^9}, {3.853237588258792*^9, 
+   3.8532376226404247`*^9}, {3.853237778643564*^9, 3.8532378858305807`*^9}, {
+   3.853237933211071*^9, 3.85323808845253*^9}, {3.8532381227532473`*^9, 
+   3.853238179907928*^9}, {3.8532382259822187`*^9, 3.85323825254956*^9}, {
+   3.853238282864976*^9, 3.853238285883113*^9}, {3.85323832044989*^9, 
+   3.8532384184228897`*^9}, {3.853278934299205*^9, 3.8532790166026993`*^9}, {
+   3.853279048536455*^9, 3.8532790703439207`*^9}, {3.853279100971805*^9, 
+   3.853279228502046*^9}, {3.853279358784966*^9, 3.853279386536068*^9}, {
+   3.853279423575974*^9, 3.853279432358632*^9}, {3.853279566368443*^9, 
+   3.853279653498344*^9}, {3.853319641592176*^9, 3.85331966792267*^9}, {
+   3.853353395447568*^9, 3.853353435324609*^9}, {3.853353466856502*^9, 
+   3.853353533437097*^9}, {3.853353573730054*^9, 3.853353594905177*^9}, {
+   3.853353643746532*^9, 3.853353665057022*^9}, {3.8533619249352922`*^9, 
+   3.853362037212476*^9}, {3.853362080995619*^9, 3.853362104558444*^9}, {
+   3.853362180987926*^9, 3.8533622168897038`*^9}, {3.853362294557448*^9, 
+   3.8533623022882223`*^9}, {3.8533623347582903`*^9, 
+   3.8533623963789186`*^9}, {3.8533624349935226`*^9, 3.853362454516654*^9}, {
+   3.853362694528049*^9, 3.853362769471534*^9}, {3.85336283010505*^9, 
+   3.853362851210932*^9}, {3.8533628872292147`*^9, 3.8533628903355703`*^9}, {
+   3.853362934154099*^9, 3.853362986818419*^9}, {3.8533631799902363`*^9, 
+   3.85336320256103*^9}, {3.853363247571878*^9, 3.853363272718648*^9}, {
+   3.853363343746332*^9, 3.853363390442793*^9}, {3.853363455359256*^9, 
+   3.853363463669347*^9}, {3.853363507812284*^9, 3.853363552186007*^9}, 
+   3.853363601514077*^9, {3.853363791302991*^9, 3.853363847064252*^9}, {
+   3.853363893203071*^9, 3.853363910179682*^9}, {3.853363973593997*^9, 
+   3.853364039745166*^9}, {3.853364072367805*^9, 3.853364072370854*^9}, {
+   3.8533641043782663`*^9, 3.85336413713192*^9}, {3.853364168659918*^9, 
+   3.85336422519611*^9}, {3.8533642698534613`*^9, 3.853364323840233*^9}, {
+   3.853364363707481*^9, 3.853364520634519*^9}, {3.853364556277005*^9, 
+   3.853364577566008*^9}, {3.853364647712294*^9, 3.853364825114064*^9}, 
+   3.853364926419717*^9, {3.853364972746558*^9, 3.853365011722251*^9}, {
+   3.85336505376825*^9, 3.8533650573462963`*^9}, {3.8533651073957376`*^9, 
+   3.853365110692708*^9}, 3.853365195631851*^9, {3.8533652464570017`*^9, 
+   3.853365252576315*^9}, {3.8533654546516743`*^9, 3.853365466577787*^9}, {
+   3.853365503620379*^9, 3.853365608330038*^9}, {3.8533656664657097`*^9, 
+   3.853365676005952*^9}, {3.8534068862576523`*^9, 3.853406900512939*^9}, {
+   3.853406940506804*^9, 3.853406973816966*^9}, {3.853407020433722*^9, 
+   3.8534070632208776`*^9}, {3.853407151310019*^9, 3.853407278756785*^9}, {
+   3.8534073114101048`*^9, 3.853407429424789*^9}, {3.853407489830112*^9, 
+   3.8534075730079317`*^9}, {3.853407624594632*^9, 3.853407646562224*^9}, {
+   3.853407684852356*^9, 3.85340778424223*^9}, {3.853407890507372*^9, 
+   3.853407915404204*^9}, {3.853407965169093*^9, 3.85340799513414*^9}, {
+   3.8534080426678743`*^9, 3.853408081115402*^9}, {3.8534081526192417`*^9, 
+   3.8534081806210117`*^9}, {3.8534082130172043`*^9, 3.853408360249662*^9}, {
+   3.853408409557022*^9, 3.853408524063498*^9}, {3.8534085549247*^9, 
+   3.85340856373167*^9}, {3.8534085954580297`*^9, 3.853408618740996*^9}, {
+   3.85340872734717*^9, 3.853408756776946*^9}, {3.853408786984674*^9, 
+   3.853408823021607*^9}, {3.8534088568384666`*^9, 3.85340887412337*^9}, {
+   3.8534089797929792`*^9, 3.8534089865196466`*^9}, {3.853409181415578*^9, 
+   3.853409493815135*^9}, {3.853409562270606*^9, 3.8534096178638887`*^9}, {
+   3.853409649575735*^9, 3.8534096888392153`*^9}, {3.8534097253819227`*^9, 
+   3.853409773871827*^9}, {3.853409833182476*^9, 3.853409833899515*^9}, {
+   3.853409933958104*^9, 3.853409933961555*^9}, 3.853410022906177*^9, {
+   3.853410082208301*^9, 3.8534101421815853`*^9}, {3.8534101788131533`*^9, 
+   3.853410182435869*^9}, {3.853425580483405*^9, 3.853425676383209*^9}, {
+   3.853425851443541*^9, 3.853425875432242*^9}, {3.853425939340015*^9, 
+   3.853425945650153*^9}, {3.85342598168426*^9, 3.853425995249672*^9}, {
+   3.853426063424642*^9, 3.8534261160430937`*^9}, {3.853426153249757*^9, 
+   3.853426207038232*^9}, {3.8534262448831043`*^9, 3.8534263311950912`*^9}, {
+   3.853426491276945*^9, 3.853426523690329*^9}, {3.85342656376894*^9, 
+   3.8534265764821043`*^9}, {3.8534266236471786`*^9, 3.853427005476479*^9}, {
+   3.853427050435725*^9, 3.853427236492984*^9}, 3.853427458955668*^9, {
+   3.853427557672348*^9, 3.8534278119154663`*^9}, 3.853427939729641*^9, 
+   3.8534279806301327`*^9, {3.85342802084888*^9, 3.8534280213970346`*^9}, {
+   3.8534281209057007`*^9, 3.853428179202636*^9}, {3.8534282206734247`*^9, 
+   3.853428246153453*^9}, {3.853428347188178*^9, 3.853428436437045*^9}, {
+   3.853428471227051*^9, 3.853428834116095*^9}, {3.853428910401952*^9, 
+   3.853428935781604*^9}, {3.853428979943164*^9, 3.853429141967402*^9}, {
+   3.853429188694462*^9, 3.853429193343576*^9}, {3.853429224419744*^9, 
+   3.853429229076634*^9}, {3.853429263686274*^9, 3.853429311237664*^9}, {
+   3.853429366981947*^9, 3.8534294973983793`*^9}, 3.853429535369671*^9, {
+   3.853429587032819*^9, 3.853429592278994*^9}, {3.853429625817585*^9, 
+   3.853429711514591*^9}, {3.8534297859333363`*^9, 3.8534298302136507`*^9}, {
+   3.85343009454177*^9, 3.8534302289146643`*^9}, {3.853430269548326*^9, 
+   3.853430411455595*^9}, {3.853430498591696*^9, 3.8534306426837473`*^9}, {
+   3.853430692889331*^9, 3.8534307332051563`*^9}, {3.853430888095891*^9, 
+   3.853430991090171*^9}, {3.8534310342652082`*^9, 3.853431144868258*^9}, {
+   3.853431459256988*^9, 3.853431479033622*^9}, {3.8534315178464193`*^9, 
+   3.8534315888201733`*^9}, 3.8534332391507597`*^9, 3.853433370865206*^9, {
+   3.853433419478854*^9, 3.8534334508744783`*^9}, 3.853433635493444*^9, {
+   3.853433666018168*^9, 3.853433686047662*^9}, {3.853438194720407*^9, 
+   3.853438222681993*^9}, {3.85343828230796*^9, 3.853438292305941*^9}, {
+   3.853438327189088*^9, 3.853438358510092*^9}, {3.853438428434558*^9, 
+   3.853438460133485*^9}, {3.853438523731893*^9, 3.853438581131495*^9}, {
+   3.8534386648134336`*^9, 3.853438709629531*^9}, {3.853438762013006*^9, 
+   3.8534388093292713`*^9}, {3.853438841864908*^9, 3.8534389098794622`*^9}, {
+   3.853438972367531*^9, 3.8534389905005713`*^9}, {3.853439089403273*^9, 
+   3.85343911118685*^9}, {3.853439246431615*^9, 3.853439363339279*^9}, {
+   3.853439420988*^9, 3.8534395938919783`*^9}, {3.8534396556618977`*^9, 
+   3.85343972095478*^9}, 3.853439763793126*^9, {3.85343979587295*^9, 
+   3.853439880184823*^9}, {3.853439930994136*^9, 3.8534399766635447`*^9}, {
+   3.853440006788789*^9, 3.853440057010171*^9}, {3.85344009424407*^9, 
+   3.8534402046638603`*^9}, {3.853440248176054*^9, 3.853440266923398*^9}, {
+   3.8534402971964407`*^9, 3.853440309442569*^9}, {3.853440347767806*^9, 
+   3.853440350216984*^9}, {3.853440938324766*^9, 3.8534409399009247`*^9}, {
+   3.853441003998736*^9, 3.853441072340931*^9}, {3.8534411577496233`*^9, 
+   3.8534411623757267`*^9}, {3.8534413041086407`*^9, 3.853441346430847*^9}, {
+   3.853441384377749*^9, 3.853441454825667*^9}, 3.8534415098973303`*^9, {
+   3.8534415449867496`*^9, 3.853441609130227*^9}, {3.853441643150289*^9, 
+   3.853441860191195*^9}, {3.853441910374338*^9, 3.8534420313082523`*^9}, {
+   3.8534420870749493`*^9, 3.853442152156909*^9}, 3.853442324848234*^9, {
+   3.853442357850772*^9, 3.853442428860731*^9}, {3.853442460252879*^9, 
+   3.8534424602555943`*^9}, {3.8534425191371307`*^9, 3.853442576033309*^9}, {
+   3.853442644109207*^9, 3.853442646499868*^9}, {3.8534427020136633`*^9, 
+   3.8534427525568132`*^9}, {3.853442823863591*^9, 3.853442824187889*^9}, {
+   3.853442880500648*^9, 3.8534429963523703`*^9}, {3.853443031056284*^9, 
+   3.8534430436732187`*^9}, {3.853443097859825*^9, 3.853443099996004*^9}, {
+   3.8534431371067533`*^9, 3.853443190875763*^9}, {3.853443223267715*^9, 
+   3.8534432686536503`*^9}, {3.85344333789465*^9, 3.8534433719909353`*^9}, {
+   3.85344341839853*^9, 3.853443419417482*^9}, {3.853443473841228*^9, 
+   3.853443542722851*^9}, {3.853443612844161*^9, 3.8534436336754837`*^9}, {
+   3.8534436761162663`*^9, 3.853443676119141*^9}, {3.853443753020722*^9, 
+   3.85344376276089*^9}, {3.853443872698638*^9, 3.853443898705843*^9}, {
+   3.853443966933773*^9, 3.853443985356943*^9}, {3.853444046461069*^9, 
+   3.853444050772979*^9}, {3.8534443062055893`*^9, 3.853444331592471*^9}, {
+   3.8534444054452744`*^9, 3.853444429715005*^9}, {3.853444459754327*^9, 
+   3.8534444646351137`*^9}, {3.853444498311843*^9, 3.8534444994452963`*^9}, {
+   3.8534445653310328`*^9, 3.853444593570877*^9}, {3.8534446583007393`*^9, 
+   3.853444694191783*^9}, {3.853444747560158*^9, 3.8534448109009113`*^9}, {
+   3.85344493105814*^9, 3.85344498591809*^9}, 3.8534450296888514`*^9, {
+   3.853445106008505*^9, 3.853445123105844*^9}, {3.853445155064619*^9, 
+   3.8534451640970793`*^9}, 3.853445196984795*^9, 3.853445263348357*^9, {
+   3.8534452949394503`*^9, 3.853445408101915*^9}, {3.853445452760872*^9, 
+   3.853445520313819*^9}, {3.853445612617104*^9, 3.8534456484503117`*^9}, 
+   3.8534457494158487`*^9, 3.853445816343676*^9, 3.8534458865004663`*^9, 
+   3.8534459548057137`*^9, {3.8534460306088*^9, 3.8534460313641768`*^9}, {
+   3.853446079258955*^9, 3.853446080204364*^9}, {3.8534462870242367`*^9, 
+   3.8534463224545183`*^9}, {3.853492644260819*^9, 3.853492646940997*^9}, {
+   3.8534926957796164`*^9, 3.853492775265259*^9}, {3.853492903085956*^9, 
+   3.853492911202425*^9}, {3.853492988316964*^9, 3.853493024938054*^9}, {
+   3.8534930629454527`*^9, 3.85349310731596*^9}, {3.853493156045237*^9, 
+   3.853493164608214*^9}, {3.853493199921336*^9, 3.853493233534148*^9}, {
+   3.853493292082327*^9, 3.853493297945633*^9}, 3.853493366717291*^9, 
+   3.853493441453864*^9, {3.853493569797996*^9, 3.85349357093791*^9}, {
+   3.8534938049326277`*^9, 3.853493820958261*^9}, {3.853493875430132*^9, 
+   3.853493890286027*^9}, {3.8534939477276382`*^9, 3.853493955747328*^9}, {
+   3.8534939860392513`*^9, 3.8534940315930443`*^9}, {3.853494164524181*^9, 
+   3.8534941880139503`*^9}, {3.853494228850164*^9, 3.853494259375269*^9}, {
+   3.8534970787192793`*^9, 3.853497092075354*^9}, {3.85349723001149*^9, 
+   3.853497233369671*^9}, {3.853513510667839*^9, 3.8535135531210938`*^9}, {
+   3.853513632269458*^9, 3.853513636103026*^9}, {3.8535137718120003`*^9, 
+   3.853513801151876*^9}, 3.853513836509563*^9, 3.8535139407544107`*^9, {
+   3.853513972416697*^9, 3.853513987135998*^9}, {3.853514056141831*^9, 
+   3.853514068043785*^9}, {3.853514104454953*^9, 3.85351412668262*^9}, {
+   3.853514188050782*^9, 3.853514343769842*^9}, {3.853514479994404*^9, 
+   3.8535145839176407`*^9}, {3.853514655912015*^9, 3.8535146563592863`*^9}, {
+   3.853514749265374*^9, 3.8535147516839542`*^9}, 
+   3.8535148409843884`*^9},ExpressionUUID->"d1b4b3e2-350f-4710-9acc-\
+bbb4b77689e0"]
+},
+WindowToolbars->{"RulerBar", "EditBar"},
+WindowSize->{808, 1185},
+WindowMargins->{{Automatic, 516}, {Automatic, 25}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Bud's Documentation.nb"]]}, Visible -> 
+  False, FrontEndVersion -> 
+  "13.0 for Mac OS X x86 (64-bit) (December 2, 2021)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"6725351a-9070-490e-8ec2-321b07740e61"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 72675, 2035, 3136, "Text",ExpressionUUID->"d1b4b3e2-350f-4710-9acc-bbb4b77689e0"]
+}
+]
+*)
+

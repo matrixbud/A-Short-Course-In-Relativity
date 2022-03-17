@@ -1,0 +1,910 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     31344,        902]
+NotebookOptionsPosition[     30626,        878]
+NotebookOutlinePosition[     31390,        904]
+CellTagsIndexPosition[     31347,        901]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ StyleBox["Exercise 2.7.4",
+  FontFamily->"Arial",
+  FontSize->18,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.9981841763942931]],
+ StyleBox["  Show that ",
+  FontFamily->"Arial",
+  FontSize->18,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["g", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "d178b0e5-3c88-431e-a23f-fa2858f4a9ec"],
+ " \[TildeTilde] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Eta]", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "42672faa-f104-401d-932c-a89d10e367fb"],
+ " \[Dash] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["h", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "6c304c9c-26c3-492f-95c2-4114e0facaea"],
+ StyleBox["\n\nSince ",
+  FontFamily->"Arial",
+  FontSize->18,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},ExpressionUUID->
+  "99be2053-c44b-4990-8d23-d91a752f2ffd"],
+ StyleBox[" = ",
+  FontFamily->"Arial",
+  FontSize->18,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Eta]", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "a37f70b2-d42b-44b7-9e06-b21e8582fce5"],
+ StyleBox[" + ",
+  FontFamily->"Arial",
+  FontSize->18,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["h", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},ExpressionUUID->
+  "651d344c-c6e4-4139-8c82-13d792f116eb"],
+ StyleBox[" where ",
+  FontFamily->"Arial",
+  FontSize->18,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["h", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},ExpressionUUID->
+  "3728d6c8-b46c-4d91-8555-151159ab3cba"],
+ " is small, we assume there is a small ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "40861c7b-3fed-483c-8c25-0179aa26ac78"],
+ " such that",
+ StyleBox[" ",
+  FontFamily->"Arial",
+  FontSize->18,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ "\n\t",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["g", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "605a0b1e-2bac-4b4f-bb62-8251f7365138"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Eta]", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "ea469a84-05f5-4477-891f-953ac6c740f9"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "7f49defe-5519-4f0f-bd68-23b28a7aa496"],
+ ".",
+ StyleBox["\n\nObserve that\n\t",
+  FontFamily->"Arial",
+  FontSize->18,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ Cell[BoxData[
+  SubsuperscriptBox["\[Delta]", 
+   RowBox[{" ", 
+    StyleBox["\[Nu]",
+     FontFamily->"Symbol",
+     FontWeight->"Regular"]}], 
+   RowBox[{" ", "\[Mu]"}]]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},
+  FontFamily->"Arial",
+  FontWeight->"Regular",ExpressionUUID->
+  "48132e59-cfb1-488d-8ca9-5ea6150762be"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["g", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "c81fb1ba-1fbf-431c-9ecf-192147b584e4"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    StyleBox[
+     RowBox[{"\[Sigma]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},ExpressionUUID->
+  "cc7faa16-815a-4c60-87e9-e62436a24555"],
+ " = (",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Eta]", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "7d7722c0-14f1-47cc-a756-fbf955249975"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "47ec1aee-584f-4cb4-9b7c-691b100ebda2"],
+ ") ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["\[Eta]", 
+     StyleBox[
+      RowBox[{"\[Sigma]", 
+       StyleBox["\[Nu]",
+        FontFamily->"Symbol",
+        FontWeight->"Regular"]}]]]}], TraditionalForm]],ExpressionUUID->
+  "a706c2ac-6e96-4730-9a71-e30f235a38a1"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["h", 
+    StyleBox[
+     RowBox[{"\[Sigma]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},ExpressionUUID->
+  "2da26c1d-45ef-4629-84fe-e50277e44b7d"],
+ ") \n\t     = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Eta]", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "5578531c-aecd-4cbf-80dc-137d6ec6cbd4"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Eta]", "\[Sigma]\[Nu]"], TraditionalForm]],ExpressionUUID->
+  "5dc54904-b902-4db9-99ab-bdc849d54f6d"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Eta]", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "cb093bf8-8b12-4889-9fde-c4e2232277b3"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["h", "\[Sigma]\[Nu]"], TraditionalForm]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},ExpressionUUID->
+  "33542e9c-1d53-4660-b759-01fd1cdcfd0b"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "3ff77bda-26a7-4a79-a9a9-f8c4b391b902"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Eta]", "\[Sigma]\[Nu]"], TraditionalForm]],ExpressionUUID->
+  "795d3818-6a38-484a-af87-1bf2e733ff44"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "59aaa4d9-dd6d-4340-adb7-0f76e4e3b450"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["h", "\[Sigma]\[Nu]"], TraditionalForm]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},ExpressionUUID->
+  "b54d6312-34a2-4a4f-bf14-348204c74549"],
+ "\n\t     \[TildeTilde] ",
+ Cell[BoxData[
+  SubsuperscriptBox["\[Delta]", 
+   RowBox[{" ", 
+    StyleBox["\[Nu]",
+     FontFamily->"Symbol",
+     FontWeight->"Regular"]}], 
+   RowBox[{" ", "\[Mu]"}]]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},
+  FontFamily->"Arial",
+  FontWeight->"Regular",ExpressionUUID->
+  "5020c653-d840-4594-9081-433295e671c1"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Eta]", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "0f9520b5-e29e-4622-8ebe-3c29256cd1f2"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["h", 
+    StyleBox[
+     RowBox[{"\[Sigma]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},ExpressionUUID->
+  "0be1cbb7-7032-4ca1-9895-b327a2f16c81"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "9326e339-2a34-456a-b54d-1f08df6f9cdc"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Eta]", 
+    StyleBox[
+     RowBox[{"\[Sigma]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "be3914f6-e700-4fb8-b2c8-041f14b7a3e1"],
+ "  since ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "5e9672c2-4955-4355-8b06-9c9fd1c0cada"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["h", 
+    StyleBox[
+     RowBox[{"\[Sigma]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},ExpressionUUID->
+  "974f569a-1bd7-4d93-be54-8e9d09dfe30d"],
+ " is 2nd order.\n\t    \nThis implies that\n\t ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "54512e04-9805-4c9c-8038-84d0a314dda6"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Eta]", 
+    StyleBox[
+     RowBox[{"\[Sigma]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "fb49865c-9dc0-4b23-8d47-5a45da5234a1"],
+ " \[TildeTilde] - ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Eta]", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "a9ffcbf3-4095-4f54-9d81-10c944f7de19"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["h", 
+    StyleBox[
+     RowBox[{"\[Sigma]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},ExpressionUUID->
+  "7964628c-3e1f-432a-afec-05ed53791713"],
+ ".\n\nChanging dummy variable ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["\[Nu]",
+    FontFamily->"Symbol",
+    FontWeight->"Regular"], TraditionalForm]],ExpressionUUID->
+  "68220a6e-4d42-42c5-94bb-dc26a8a370b0"],
+ " to \[Rho], we get\n\t ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "b1be2f93-a8bc-45f9-848c-b27bd21b7d7d"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Eta]", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Rho]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "9c41472d-9a6d-44b2-bf4c-e5e2413cd5d0"],
+ " \[TildeTilde] - ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Eta]", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "2630ff98-4a74-4028-8729-e014a2e6ac3f"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["h", "\[Sigma]\[Rho]"], TraditionalForm]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},ExpressionUUID->
+  "3e506db0-fdad-4e4c-88ac-d432cb2cb10c"],
+ ".\n\nSo,\n\t",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "c54ea340-9aa7-4259-92a4-62126681eb3a"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "2dc0f247-7bb0-4563-b0df-d46fe14ac64c"],
+ Cell[BoxData[
+  SubsuperscriptBox["\[Delta]", 
+   RowBox[{" ", 
+    StyleBox["\[Sigma]",
+     FontFamily->"Symbol",
+     FontWeight->"Regular"]}], 
+   RowBox[{" ", 
+    FormBox[
+     StyleBox["\[Nu]",
+      FontFamily->"Symbol",
+      FontWeight->"Regular"],
+     TraditionalForm]}]]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},
+  FontFamily->"Arial",
+  FontWeight->"Regular",ExpressionUUID->
+  "277733a8-b789-4189-8e2e-91d3b2711960"],
+ " \[TildeTilde] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "b7b96605-a8f7-4d91-890f-e73ac5ad4505"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Eta]", "\[Sigma]\[Rho]"], TraditionalForm]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},ExpressionUUID->
+  "231ee6f2-85f7-4341-85b0-39dd88f1ac34"],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Eta]", 
+    StyleBox["\[Nu]\[Rho]",
+     FontFamily->"Symbol",
+     FontWeight->"Regular"]], TraditionalForm]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},ExpressionUUID->
+  "196c2b16-1ccd-4f87-915f-90d0cd9a9d17"],
+ " \[TildeTilde] - ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Eta]", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Sigma]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "89d43c6d-035e-4bfb-9dde-d67c569e783b"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["h", "\[Sigma]\[Rho]"], TraditionalForm]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},ExpressionUUID->
+  "2000c156-3240-47fb-bd08-fe620d5aefc4"],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Eta]", 
+    StyleBox["\[Nu]\[Rho]",
+     FontFamily->"Symbol",
+     FontWeight->"Regular"]], TraditionalForm]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}},ExpressionUUID->
+  "2863e41f-8bda-40ad-bc37-f82fe57664ac"],
+ " \[TildeTilde] - ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["h", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "4ff45297-8647-48d1-9fac-cc5ce679beae"],
+ "\n \n which gives ",
+ StyleBox["\n\t",
+  FontFamily->"Arial",
+  FontSize->18,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["g", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "8328ff6d-9c94-457f-b998-5daa5acfbc72"],
+ StyleBox[" = ",
+  FontFamily->"Arial",
+  FontSize->18,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Eta]", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "dd7db1aa-aa3a-4192-b6d4-4d1e8e3ae9c1"],
+ StyleBox[" + ",
+  FontFamily->"Arial",
+  FontSize->18,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "3e7f8ee8-7340-44b6-8e04-8c64cfc40a5d"],
+ StyleBox[" \[TildeTilde] ",
+  FontFamily->"Arial",
+  FontSize->18,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Eta]", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "9962477a-b898-4846-b291-4d887bcb0db8"],
+ StyleBox[" \[Dash] ",
+  FontFamily->"Arial",
+  FontSize->18,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["h", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "8ffbc18b-ad35-4930-b61a-83279fd711bb"],
+ StyleBox[".          \t\t\t \[FilledSmallSquare]\n\n\n",
+  FontFamily->"Arial",
+  FontSize->18,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ Cell[BoxData[
+  StyleBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"But", " ", "..."}], " ", "why", " ", "not", " ", "just", " ", 
+      "use", " ", "the", " ", 
+      RowBox[{"(", "exact", ")"}], " ", "equality", " ", 
+      FormBox[
+       SuperscriptBox["g", 
+        StyleBox[
+         RowBox[{"\[Mu]", 
+          StyleBox["\[Nu]",
+           FontFamily->"Symbol",
+           FontWeight->"Regular"]}]]],
+       TraditionalForm]}], "=", " ", 
+     RowBox[{
+      FormBox[
+       SuperscriptBox["\[Eta]", 
+        StyleBox[
+         RowBox[{"\[Mu]", 
+          StyleBox["\[Nu]",
+           FontFamily->"Symbol",
+           FontWeight->"Regular"]}]]],
+       TraditionalForm], " ", "+", " ", 
+      RowBox[{
+       FormBox[
+        SuperscriptBox["h", 
+         StyleBox[
+          RowBox[{"\[Mu]", 
+           StyleBox["\[Nu]",
+            FontFamily->"Symbol",
+            FontWeight->"Regular"]}]]],
+        TraditionalForm], " ", "?", "\[IndentingNewLine]", 
+       FormBox[
+        RowBox[{
+         SuperscriptBox["g", 
+          StyleBox[
+           RowBox[{"\[Mu]", 
+            StyleBox["\[Nu]",
+             FontFamily->"Symbol",
+             FontWeight->"Regular"]}]]], " ", "=", 
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["g", 
+            StyleBox[
+             RowBox[{"\[Mu]", 
+              StyleBox["\[Sigma]",
+               FontFamily->"Symbol",
+               FontWeight->"Regular"]}]]], 
+           SubsuperscriptBox["\[Delta]", "\[Sigma]", 
+            StyleBox["\[Nu]",
+             FontFamily->"Symbol",
+             FontWeight->"Regular"]]}], " ", "=", 
+          RowBox[{
+           RowBox[{
+            SuperscriptBox["g", 
+             StyleBox[
+              RowBox[{"\[Mu]", 
+               StyleBox["\[Sigma]",
+                FontFamily->"Symbol",
+                FontWeight->"Regular"]}]]], 
+            SuperscriptBox["g", 
+             StyleBox["\[Nu]\[Rho]",
+              FontFamily->"Symbol",
+              FontWeight->"Regular"]], 
+            SubscriptBox["g", "\[Sigma]\[Rho]"]}], " ", "=", " ", 
+           RowBox[{
+            RowBox[{
+             SuperscriptBox["g", 
+              StyleBox[
+               RowBox[{"\[Mu]", 
+                StyleBox["\[Sigma]",
+                 FontFamily->"Symbol",
+                 FontWeight->"Regular"]}]]], 
+             RowBox[{
+              SuperscriptBox["g", 
+               StyleBox["\[Nu]\[Rho]",
+                FontFamily->"Symbol",
+                FontWeight->"Regular"]], "(", 
+              RowBox[{
+               SubscriptBox["\[Eta]", "\[Sigma]\[Rho]"], "+", 
+               SubscriptBox["h", "\[Sigma]\[Rho]"]}], ")"}]}], "=", 
+            RowBox[{
+             RowBox[{
+              SuperscriptBox["g", 
+               StyleBox[
+                RowBox[{"\[Mu]", 
+                 StyleBox["\[Sigma]",
+                  FontFamily->"Symbol",
+                  FontWeight->"Regular"]}]]], "(", 
+              RowBox[{
+               SubsuperscriptBox[
+                StyleBox["\[Eta]",
+                 FontSlant->"Plain"], 
+                StyleBox["\[Sigma]",
+                 FontSlant->"Plain"], 
+                RowBox[{"   ", 
+                 StyleBox["\[Nu]",
+                  FontFamily->"Symbol",
+                  FontWeight->"Regular",
+                  FontSlant->"Plain"]}]], "+", 
+               SubsuperscriptBox["h", 
+                StyleBox["\[Sigma]",
+                 FontSlant->"Plain"], 
+                RowBox[{"   ", 
+                 StyleBox["\[Nu]",
+                  FontFamily->"Symbol",
+                  FontWeight->"Regular",
+                  FontSlant->"Plain"]}]]}], ")"}], "=", 
+             RowBox[{
+              SuperscriptBox["\[Eta]", 
+               StyleBox[
+                RowBox[{"\[Mu]", 
+                 StyleBox["\[Nu]",
+                  FontFamily->"Symbol",
+                  FontWeight->"Regular"]}]]], "+", 
+              RowBox[{
+               SuperscriptBox["h", 
+                StyleBox[
+                 RowBox[{"\[Mu]", 
+                  StyleBox["\[Nu]",
+                   FontFamily->"Symbol",
+                   FontWeight->"Regular"]}]]], "\[Checkmark]"}]}]}]}]}]}]}],
+        TraditionalForm]}]}]}], "\[IndentingNewLine]"}],
+   FontFamily->"Arial",
+   FontSize->18,
+   FontWeight->"Regular"]], "Text",
+  CellChangeTimes->{{3.849353922073636*^9, 3.849353922086197*^9}, 
+    3.8493540830198593`*^9, {3.8493595198314953`*^9, 3.849359649052474*^9}, {
+    3.849360072882926*^9, 3.849360074381179*^9}, 3.849367167812972*^9, {
+    3.84936727768841*^9, 3.849367292342773*^9}, {3.8493687746809187`*^9, 
+    3.849368937371867*^9}},ExpressionUUID->
+  "0c145571-f91b-4c8d-ba22-e65e6facae92"],
+ StyleBox["\nSince ",
+  FontFamily->"Arial",
+  FontSize->18,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["h", 
+    StyleBox[
+     RowBox[{"\[Mu]", 
+      StyleBox["\[Nu]",
+       FontFamily->"Symbol",
+       FontWeight->"Regular"]}]]], TraditionalForm]],ExpressionUUID->
+  "7f08c299-3e6b-43b9-9d30-19e1a36a437a"],
+ " is small, the two expressions are approximately equal.\n"
+}], "Text",
+ CellChangeTimes->{{3.842643169774825*^9, 3.842643187948275*^9}, {
+   3.842643361987941*^9, 3.842643410000313*^9}, {3.8426435882545757`*^9, 
+   3.8426436940335703`*^9}, {3.842643738481482*^9, 3.842643928665395*^9}, {
+   3.842643964458764*^9, 3.8426440307068787`*^9}, 3.842644085601469*^9, {
+   3.8426441670182257`*^9, 3.842644264332342*^9}, {3.842644315232226*^9, 
+   3.8426444168693123`*^9}, {3.842644505940119*^9, 3.842644510486991*^9}, {
+   3.842644541853222*^9, 3.8426445744333353`*^9}, {3.842689156261647*^9, 
+   3.842689265682391*^9}, {3.842689322819481*^9, 3.842689678305855*^9}, {
+   3.842689726547262*^9, 3.842689771985897*^9}, {3.842689804100806*^9, 
+   3.842689812155156*^9}, {3.842689855265132*^9, 3.842689876665328*^9}, {
+   3.842689931371182*^9, 3.8426900224165707`*^9}, {3.8426900778108683`*^9, 
+   3.8426901277796907`*^9}, {3.842690169234448*^9, 3.842690288684498*^9}, {
+   3.8426903334452667`*^9, 3.8426904332023687`*^9}, {3.8426904693330097`*^9, 
+   3.842690602742251*^9}, {3.842690693893867*^9, 3.8426907167701263`*^9}, {
+   3.842690768252356*^9, 3.8426907943523083`*^9}, 3.842690849857589*^9, {
+   3.842690884533676*^9, 3.842690939104113*^9}, {3.842691035193879*^9, 
+   3.8426910426222754`*^9}, {3.842691118925811*^9, 3.8426911251529913`*^9}, {
+   3.842691167012779*^9, 3.8426913293195333`*^9}, {3.842691573279978*^9, 
+   3.842691594045492*^9}, {3.842692163824779*^9, 3.842692175750183*^9}, {
+   3.8426925525973673`*^9, 3.8426925818213873`*^9}, {3.8426926503849287`*^9, 
+   3.842692668542653*^9}, {3.842692817793398*^9, 3.842692834970995*^9}, {
+   3.84269287096784*^9, 3.842692992595152*^9}, {3.842693893827161*^9, 
+   3.842693906085497*^9}, {3.8426940319350967`*^9, 3.842694100198814*^9}, {
+   3.842694193343148*^9, 3.84269425027848*^9}, {3.842694379512889*^9, 
+   3.842694595905052*^9}, {3.842694627865549*^9, 3.842694682109445*^9}, {
+   3.8426948663719263`*^9, 3.8426948890546083`*^9}, {3.842694919610065*^9, 
+   3.842694953859943*^9}, {3.8426949877391033`*^9, 3.84269504645401*^9}, {
+   3.842701493439357*^9, 3.84270184057483*^9}, {3.842701908381097*^9, 
+   3.8427019929764853`*^9}, {3.842702024895719*^9, 3.842702144928294*^9}, {
+   3.8427022084240513`*^9, 3.8427023414721193`*^9}, {3.842702417603689*^9, 
+   3.842702559432311*^9}, {3.842702590388989*^9, 3.8427026106945667`*^9}, {
+   3.8427027577409267`*^9, 3.8427027604579983`*^9}, {3.842702818260829*^9, 
+   3.842702823982807*^9}, {3.842702871517549*^9, 3.8427029260590897`*^9}, {
+   3.8427029744343*^9, 3.842702979566267*^9}, {3.84270303659199*^9, 
+   3.8427030604967337`*^9}, {3.842703181785008*^9, 3.842703183061548*^9}, {
+   3.842706458930298*^9, 3.842706543418844*^9}, {3.842706576287816*^9, 
+   3.84270661083857*^9}, {3.842706644124824*^9, 3.842706664718689*^9}, {
+   3.842706695040533*^9, 3.842706707058898*^9}, {3.84270675278061*^9, 
+   3.842706848432966*^9}, {3.8427069153340197`*^9, 3.842706915971292*^9}, {
+   3.842707906920926*^9, 3.8427079462727537`*^9}, 3.843049782797374*^9, {
+   3.843049861803273*^9, 3.843049866492518*^9}, {3.843049898208439*^9, 
+   3.843049928279397*^9}, {3.8430499604673033`*^9, 3.843050038937139*^9}, {
+   3.843050144181919*^9, 3.8430503828788977`*^9}, {3.84305089850961*^9, 
+   3.843050982998535*^9}, 3.843054488902108*^9, {3.849367251962554*^9, 
+   3.849367362797307*^9}, {3.8493674266103153`*^9, 3.849367929092494*^9}, {
+   3.84936795929126*^9, 3.849368400782386*^9}, {3.849368430935862*^9, 
+   3.849368669355803*^9}, {3.849369050797493*^9, 3.8493693019295397`*^9}, {
+   3.849369332629339*^9, 3.849369370347623*^9}, {3.8493696155434027`*^9, 
+   3.849369618021947*^9}, {3.84937048568865*^9, 3.849370507389176*^9}, {
+   3.8493705406526318`*^9, 3.849370711330222*^9}, {3.849370776499134*^9, 
+   3.8493707770948067`*^9}},ExpressionUUID->"ee4a1b08-2648-452b-9e71-\
+0d57bbabc34a"]
+},
+WindowToolbars->"EditBar",
+WindowSize->{1023, 911},
+WindowMargins->{{217, Automatic}, {Automatic, 28}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Bud's Documentation.nb"]], 
+   Cell[
+    StyleData["Text"]]}, Visible -> False, FrontEndVersion -> 
+  "13.0 for Mac OS X x86 (64-bit) (December 2, 2021)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"c76530b5-65e8-4974-a1d7-76b39e20e913"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 30064, 856, 894, "Text",ExpressionUUID->"ee4a1b08-2648-452b-9e71-0d57bbabc34a"]
+}
+]
+*)
+

@@ -1,0 +1,1560 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[     43116,       1559]
+NotebookOptionsPosition[     40239,       1482]
+NotebookOutlinePosition[     43003,       1554]
+CellTagsIndexPosition[     42960,       1551]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ StyleBox["Exercise 2.1.1.",
+  FontFamily->"Arial",
+  FontSize->19,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.9981841763942931]],
+ StyleBox["  \n(a) If ",
+  FontFamily->"Arial",
+  FontSize->19,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ StyleBox["t",
+  FontFamily->"Arial",
+  FontSize->19,
+  FontWeight->"Regular",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0., 0., 0.]],
+ StyleBox[" = ",
+  FontFamily->"Arial",
+  FontSize->19,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ StyleBox["f",
+  FontFamily->"Arial",
+  FontSize->19,
+  FontWeight->"Regular",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0., 0., 0.]],
+ StyleBox["(",
+  FontFamily->"Arial",
+  FontSize->19,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ StyleBox["s)",
+  FontFamily->"Arial",
+  FontSize->19,
+  FontWeight->"Regular",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0., 0., 0.]],
+ StyleBox[" is used to parameterize a straight line in Euclidean space, show \
+that the geodesic equation (2.11) takes the form",
+  FontFamily->"Arial",
+  FontSize->19,
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ StyleBox[" \n\t",
+  FontFamily->"Arial",
+  FontWeight->"Regular",
+  FontColor->RGBColor[0., 0., 0.]],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     RowBox[{
+      SuperscriptBox[
+       StyleBox["d",
+        FontSlant->"Plain"], "2"], 
+      SuperscriptBox["u", 
+       RowBox[{" ", "i"}]]}], 
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]], "2"]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "955fa9e8-b3a6-430a-8cb7-2c1d00022d3c"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["\[CapitalGamma]", 
+    RowBox[{"j", " ", "k"}], "i"], TraditionalForm]],ExpressionUUID->
+  "2fa49061-a7c0-4180-a6bf-5db25460ecfe"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "i"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "cf5c6ffc-1cfd-4293-a5ca-e9f40bfde57f"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "j"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "0b4bcbd6-a57f-4edc-926f-db093c24b671"],
+ " = ",
+ StyleBox["h",
+  FontSlant->"Italic"],
+ "(",
+ StyleBox["s",
+  FontSlant->"Italic"],
+ ") ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "i"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "3cec4286-c048-42f6-85b7-ba6e7dfe5505"],
+ "  where    ",
+ StyleBox["h",
+  FontSlant->"Italic"],
+ "(",
+ StyleBox["s",
+  FontSlant->"Italic"],
+ ")",
+ StyleBox[" = - ",
+  FontSlant->"Italic"],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      StyleBox["d",
+       FontSlant->"Plain"], "2"], 
+     StyleBox["t",
+      FontSlant->"Italic"]}], 
+    SuperscriptBox[
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]], "2"]], TraditionalForm]],
+  FontSize->22,
+  FontWeight->"Regular",ExpressionUUID->
+  "b3792cec-b312-4ba6-80f2-66f667a64eb7"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     StyleBox[
+      FractionBox[
+       SuperscriptBox[
+        StyleBox[
+         RowBox[{
+          StyleBox["d",
+           FontSlant->"Plain"], "t"}]], " "], 
+       StyleBox[
+        RowBox[{
+         StyleBox["d",
+          FontSlant->"Plain"], "s"}]]],
+      FontSize->24], ")"}], 
+    RowBox[{"-", "2"}]], TraditionalForm]],ExpressionUUID->
+  "9ad4fb58-ae3d-4a82-aa63-567800ea6af3"],
+ ".\n\n(b)\tShow that this formula reduces to the simple form (2.11) iff ",
+ StyleBox["t",
+  FontSlant->"Italic"],
+ " = ",
+ StyleBox["A s ",
+  FontSlant->"Italic"],
+ "+ ",
+ StyleBox["B",
+  FontSlant->"Italic"],
+ " where ",
+ StyleBox["A",
+  FontSlant->"Italic"],
+ " and ",
+ StyleBox["B",
+  FontSlant->"Italic"],
+ " are constants and ",
+ StyleBox["A",
+  FontSlant->"Italic"],
+ " \[NotEqual] 0.\n\n(a)\n",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox["d",
+       FontSlant->"Plain"], " "], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "8faba36b-a172-474d-ba2f-95c5a78409dd"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]], " "], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "11211759-8b87-49e9-a6a1-1f164f205072"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox["d",
+       FontSlant->"Plain"], " "], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "1acb971a-bb2f-4122-8c17-c450068ec3ac"],
+ "  (i)\n\[DoubleRightArrow]  ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "i"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "b51cd99a-fe53-4775-a1e4-d0ccf6da6a6f"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]], " "], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "2966d9e4-8c42-472e-a5db-a9589225c3b1"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "i"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "2d4c35e0-7abd-4156-89c5-dbcd577bde8c"],
+ "  (ii),  and\n\n",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     RowBox[{
+      SuperscriptBox[
+       StyleBox["d",
+        FontSlant->"Plain"], "2"], 
+      SuperscriptBox["u", 
+       RowBox[{" ", "i"}]]}], 
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "s"}]], "2"]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "f987b7a7-759a-4532-9772-08d90cec8cbc"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox["d",
+       FontSlant->"Plain"], " "], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "f50523be-c8e3-44f5-b300-0e1634ae5d53"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "i"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "c261f1d6-c17b-4c90-a7fd-6af22f3d389b"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["=", 
+    RowBox[{"(", "ii", ")"}]], TraditionalForm]],ExpressionUUID->
+  "c773c572-d31a-415a-b66e-337751d65ef2"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox["d",
+       FontSlant->"Plain"], " "], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "947863b7-bdbb-4198-aa98-f98262c9c359"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"(", 
+     FractionBox[
+      SuperscriptBox[
+       StyleBox[
+        RowBox[{
+         StyleBox["d",
+          FontSlant->"Plain"], "t"}]], " "], 
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "s"}]]]}],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "ef00f14d-891e-4b23-8b8c-9c2c6cc0e7b6"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{
+     FractionBox[
+      SuperscriptBox[
+       StyleBox[
+        RowBox[{
+         StyleBox["d",
+          FontSlant->"Plain"], "u"}]], 
+       RowBox[{" ", "i"}]], 
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]]], ")"}],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "0003e6b0-aff7-4e0e-8cb6-44d884828e13"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    OverscriptBox["=", 
+     RowBox[{"(", 
+      RowBox[{"Prdt", " ", "Rule"}], ")"}]],
+    FontWeight->"Regular"], TraditionalForm]],ExpressionUUID->
+  "be892670-d23a-4240-b6ef-105d808dbf9c"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]], " "], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "c08b877b-3c18-467d-84ce-460b5afe4093"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox["d",
+       FontSlant->"Plain"], " "], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "fb250b3d-77c3-4805-8376-a3aa0e79f656"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "i"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "dcc0958a-76a1-4d86-ab28-02c8a956dfaf"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "i"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "9fec78b5-6f12-4c8a-adaa-a5d23202f6aa"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox["d",
+       FontSlant->"Plain"], " "], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "b4ce4c45-218b-412f-8331-109cfcb3b888"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]], " "], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "302e5c4a-63ba-4f89-a7b8-8dfb1dcbfe8e"],
+ " \n\t  ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["=", 
+    RowBox[{"(", 
+     StyleBox["i",
+      FontSlant->"Plain"], ")"}]], TraditionalForm]],ExpressionUUID->
+  "a45435f8-6397-43c4-98bf-f0ac8ee126df"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]], " "], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "f07d635e-95a4-4f74-baa9-39ee121fe6a1"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]], " "], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "59c127ae-3d40-4858-85e2-5ce591db1e28"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox["d",
+       FontSlant->"Plain"], " "], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "751ad28f-da80-4fea-8270-4fa3994a066f"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "i"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "f724f865-5191-4fad-a20d-786547db48fe"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "i"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "1e616014-99e6-40c1-b0cf-9d7f8a22b651"],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      StyleBox["d",
+       FontSlant->"Plain"], "2"], 
+     StyleBox["t",
+      FontSlant->"Italic"]}], 
+    SuperscriptBox[
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]], "2"]], TraditionalForm]],
+  FontSize->22,
+  FontWeight->"Regular",ExpressionUUID->
+  "dfdd266e-5599-424f-a6bf-3501e22ba763"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     StyleBox[
+      FractionBox[
+       SuperscriptBox[
+        StyleBox[
+         RowBox[{
+          StyleBox["d",
+           FontSlant->"Plain"], "t"}]], " "], 
+       StyleBox[
+        RowBox[{
+         StyleBox["d",
+          FontSlant->"Plain"], "s"}]]],
+      FontSize->24], ")"}], "2"], TraditionalForm]],ExpressionUUID->
+  "e4fba3fa-f30c-4f1b-8d55-c66c98d89496"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     RowBox[{
+      SuperscriptBox[
+       StyleBox["d",
+        FontSlant->"Plain"], "2"], 
+      SuperscriptBox["u", 
+       RowBox[{" ", "i"}]]}], 
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]], "2"]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "d1c346aa-9e37-467b-9936-6affab198fd3"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "i"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "29ca7692-1b18-4748-9afe-b36c2271035d"],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      StyleBox["d",
+       FontSlant->"Plain"], "2"], 
+     StyleBox["t",
+      FontSlant->"Italic"]}], 
+    SuperscriptBox[
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]], "2"]], TraditionalForm]],
+  FontSize->22,
+  FontWeight->"Regular",ExpressionUUID->
+  "c2369ef9-e965-4091-84ff-12cf2f8ad97e"],
+ "   (iii)\n\t  \n\[Therefore]  0 ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    OverscriptBox["=", 
+     RowBox[{"(", "2.4", ")"}]],
+    FontWeight->"Regular"], TraditionalForm]],ExpressionUUID->
+  "6436f6de-9b4e-4a67-8107-64e0cf40de04"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     RowBox[{
+      SuperscriptBox[
+       StyleBox["d",
+        FontSlant->"Plain"], "2"], 
+      SuperscriptBox["u", 
+       RowBox[{" ", "i"}]]}], 
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "s"}]], "2"]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "9e9d65e1-2d70-48fe-8a53-71e344ea08df"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["\[CapitalGamma]", 
+    RowBox[{"j", " ", "k"}], "i"], TraditionalForm]],ExpressionUUID->
+  "52190ae0-3cee-4312-9518-d9ae4cd331c0"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "j"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "aa8731ae-64c8-44f5-bd60-dba98734d6b3"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "k"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "5f982806-defa-4653-b0fd-6edce30479f8"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["=", 
+    RowBox[{"(", 
+     StyleBox[
+      RowBox[{"iii", ",", " ", "ii"}],
+      FontSlant->"Plain"], ")"}]], TraditionalForm]],ExpressionUUID->
+  "ad19180f-9a82-4970-bac7-cd815a51b723"],
+ "  ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     StyleBox[
+      FractionBox[
+       SuperscriptBox[
+        StyleBox[
+         RowBox[{
+          StyleBox["d",
+           FontSlant->"Plain"], "t"}]], " "], 
+       StyleBox[
+        RowBox[{
+         StyleBox["d",
+          FontSlant->"Plain"], "s"}]]],
+      FontSize->24], ")"}], "2"], TraditionalForm]],ExpressionUUID->
+  "a772629e-817c-4bcf-81c0-ba1d48fecc8e"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     RowBox[{
+      SuperscriptBox[
+       StyleBox["d",
+        FontSlant->"Plain"], "2"], 
+      SuperscriptBox["u", 
+       RowBox[{" ", "i"}]]}], 
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]], "2"]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "f376faa8-4b65-4159-9c7c-0cd5b0a75afe"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "i"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "8335c6b9-2ee1-4fc4-af68-061cb3ff2902"],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      StyleBox["d",
+       FontSlant->"Plain"], "2"], 
+     StyleBox["t",
+      FontSlant->"Italic"]}], 
+    SuperscriptBox[
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]], "2"]], TraditionalForm]],
+  FontSize->22,
+  FontWeight->"Regular",ExpressionUUID->
+  "117ec9e6-25aa-4a29-beab-f98300bded93"],
+ " +  ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["\[CapitalGamma]", 
+    RowBox[{"j", " ", "k"}], "i"], TraditionalForm]],ExpressionUUID->
+  "3788e32b-26f0-4dda-9fbe-119714e31bac"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]], " "], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "b57019aa-3f8b-414b-9bc6-af21678b787e"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "j"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "c75cc061-7312-4c60-a226-57d3fe620ba5"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]], " "], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "a5c78c1d-6cb2-49af-8c03-e568aca8b22e"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "k"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "3a97d6b4-071e-4ff5-bac9-1d547e38af24"],
+ "\n\t  =  ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     StyleBox[
+      FractionBox[
+       SuperscriptBox[
+        StyleBox[
+         RowBox[{
+          StyleBox["d",
+           FontSlant->"Plain"], "t"}]], " "], 
+       StyleBox[
+        RowBox[{
+         StyleBox["d",
+          FontSlant->"Plain"], "s"}]]],
+      FontSize->24], ")"}], "2"], TraditionalForm]],ExpressionUUID->
+  "a2c91414-f6ac-4699-b58e-23547f9337c1"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"[", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox[
+        StyleBox["d",
+         FontSlant->"Plain"], "2"], 
+       SuperscriptBox["u", 
+        RowBox[{" ", "i"}]]}], 
+      SuperscriptBox[
+       StyleBox[
+        RowBox[{
+         StyleBox["d",
+          FontSlant->"Plain"], "t"}]], "2"]]}],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "3824220f-eef2-48e3-aa5e-90952aa904cb"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["\[CapitalGamma]", 
+    RowBox[{"j", " ", "k"}], "i"], TraditionalForm]],ExpressionUUID->
+  "3608f4a3-85eb-424a-92ee-5840622c0242"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "j"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "f3642e8e-e3e3-422c-912a-e3e8d51ba953"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{
+     FractionBox[
+      SuperscriptBox[
+       StyleBox[
+        RowBox[{
+         StyleBox["d",
+          FontSlant->"Plain"], "u"}]], 
+       RowBox[{" ", "k"}]], 
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]]], "]"}],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "d48c67d5-0ebb-44ef-990a-84cd5b9cdf32"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "i"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "e38fc430-8d96-4c6a-b028-30543570a0ed"],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      StyleBox["d",
+       FontSlant->"Plain"], "2"], 
+     StyleBox["t",
+      FontSlant->"Italic"]}], 
+    SuperscriptBox[
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]], "2"]], TraditionalForm]],
+  FontSize->22,
+  FontWeight->"Regular",ExpressionUUID->
+  "41bb5ea9-73d0-4875-9cd7-e4312327d2ae"],
+ " \n\t  =  ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     StyleBox[
+      FractionBox[
+       SuperscriptBox[
+        StyleBox[
+         RowBox[{
+          StyleBox["d",
+           FontSlant->"Plain"], "t"}]], " "], 
+       StyleBox[
+        RowBox[{
+         StyleBox["d",
+          FontSlant->"Plain"], "s"}]]],
+      FontSize->24], ")"}], "2"], TraditionalForm]],ExpressionUUID->
+  "865c3863-b2dc-4519-b9ea-cf347da9bb75"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"[", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox[
+        StyleBox["d",
+         FontSlant->"Plain"], "2"], 
+       SuperscriptBox["u", 
+        RowBox[{" ", "i"}]]}], 
+      SuperscriptBox[
+       StyleBox[
+        RowBox[{
+         StyleBox["d",
+          FontSlant->"Plain"], "t"}]], "2"]]}],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "26725df5-74dc-461b-92a7-35f65d6d7443"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["\[CapitalGamma]", 
+    RowBox[{"j", " ", "k"}], "i"], TraditionalForm]],ExpressionUUID->
+  "588f72cf-59b1-42a0-92a2-df6a342c4723"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "j"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "97dedd07-a576-4f88-b507-da7ffed193c2"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{
+     FractionBox[
+      SuperscriptBox[
+       StyleBox[
+        RowBox[{
+         StyleBox["d",
+          FontSlant->"Plain"], "u"}]], 
+       RowBox[{" ", "k"}]], 
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]]], "]"}],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "46162fda-5408-4704-850d-9601e7061ce8"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox[
+       StyleBox["d",
+        FontSlant->"Plain"], "2"], 
+      StyleBox["t",
+       FontSlant->"Italic"]}], 
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "s"}]], "2"]]}], TraditionalForm]],
+  FontSize->22,
+  FontWeight->"Regular",ExpressionUUID->
+  "d2b6f0ed-bf69-45dc-bb8e-ca859a4a7cca"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      StyleBox[
+       FractionBox[
+        SuperscriptBox[
+         StyleBox[
+          RowBox[{
+           StyleBox["d",
+            FontSlant->"Plain"], "t"}]], " "], 
+        StyleBox[
+         RowBox[{
+          StyleBox["d",
+           FontSlant->"Plain"], "s"}]]],
+       FontSize->24], ")"}], 
+     RowBox[{"-", "2"}]], "]"}], TraditionalForm]],ExpressionUUID->
+  "afcf50a8-a3b5-4b04-b03c-1b26a8c4cbb0"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     StyleBox[
+      FractionBox[
+       SuperscriptBox[
+        StyleBox[
+         RowBox[{
+          StyleBox["d",
+           FontSlant->"Plain"], "t"}]], " "], 
+       StyleBox[
+        RowBox[{
+         StyleBox["d",
+          FontSlant->"Plain"], "s"}]]],
+      FontSize->24], ")"}], "2"], TraditionalForm]],ExpressionUUID->
+  "ede5279a-ecdd-4c71-a128-56903900f2fd"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "i"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "d88467d5-2d28-40c8-a7e7-eeb76fad5a88"],
+ "\n\t  =  ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     StyleBox[
+      FractionBox[
+       SuperscriptBox[
+        StyleBox[
+         RowBox[{
+          StyleBox["d",
+           FontSlant->"Plain"], "t"}]], " "], 
+       StyleBox[
+        RowBox[{
+         StyleBox["d",
+          FontSlant->"Plain"], "s"}]]],
+      FontSize->24], ")"}], "2"], TraditionalForm]],ExpressionUUID->
+  "2e37ace6-7af9-4378-b31b-03be81523b7f"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"[", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox[
+        StyleBox["d",
+         FontSlant->"Plain"], "2"], 
+       SuperscriptBox["u", 
+        RowBox[{" ", "i"}]]}], 
+      SuperscriptBox[
+       StyleBox[
+        RowBox[{
+         StyleBox["d",
+          FontSlant->"Plain"], "t"}]], "2"]]}],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "43bc2b99-2573-40fe-9a05-483f9e620b93"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["\[CapitalGamma]", 
+    RowBox[{"j", " ", "k"}], "i"], TraditionalForm]],ExpressionUUID->
+  "d852fd22-2ab1-4828-99a7-12326c1750a1"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "j"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "02258b53-de38-4765-aaa5-ff4a1b9eab6b"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "k"}]], 
+     RowBox[{
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]], " "}]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "aa1f26f8-0fe6-4100-b544-6061e87c2a7c"],
+ " \[Dash] h(s) ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{
+     FractionBox[
+      SuperscriptBox[
+       StyleBox[
+        RowBox[{
+         StyleBox["d",
+          FontSlant->"Plain"], "u"}]], 
+       RowBox[{" ", "i"}]], 
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]]], "]"}],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "29eca3d0-1cdd-4355-bae6-007f7ba98fb2"],
+ " ,\nor \n\t",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     RowBox[{
+      SuperscriptBox[
+       StyleBox["d",
+        FontSlant->"Plain"], "2"], 
+      SuperscriptBox["u", 
+       RowBox[{" ", "i"}]]}], 
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]], "2"]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "49a54258-0dd6-498a-82d6-8cea8d1b2f5c"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["\[CapitalGamma]", 
+    RowBox[{"j", " ", "k"}], "i"], TraditionalForm]],ExpressionUUID->
+  "0c619895-1b5b-4131-b2ec-52b5dc9cd433"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "j"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "1c73841c-2815-4892-83a9-b43dfb2e2c76"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "k"}]], 
+     RowBox[{
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]], " "}]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "030edffb-4f99-4684-a1b8-3ec2c1579cf2"],
+ " = ",
+ StyleBox["h",
+  FontSlant->"Italic"],
+ "(",
+ StyleBox["s",
+  FontSlant->"Italic"],
+ ") ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "i"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "bcc52364-1e14-4323-8c9d-21c416efbddc"],
+ "\t\t\t\[Checkmark]\n\n(b)  ",
+ StyleBox["h",
+  FontSlant->"Italic"],
+ "(",
+ StyleBox["s",
+  FontSlant->"Italic"],
+ ") ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "u"}]], 
+      RowBox[{" ", "i"}]], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "t"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "016f9e44-fa03-4cf2-983f-8c4510b9e709"],
+ " = 0\t\[DoubleLeftRightArrow]\t",
+ StyleBox["h",
+  FontSlant->"Italic"],
+ "(",
+ StyleBox["s",
+  FontSlant->"Italic"],
+ ") = 0\t\[DoubleLeftRightArrow]\t",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      StyleBox["d",
+       FontSlant->"Plain"], "2"], 
+     StyleBox["t",
+      FontSlant->"Italic"]}], 
+    SuperscriptBox[
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]], "2"]], TraditionalForm]],
+  FontSize->22,
+  FontWeight->"Regular",ExpressionUUID->
+  "d50b3672-6941-42e5-874b-95045d623a28"],
+ " = 0 \t\[DoubleLeftRightArrow]\t",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     SuperscriptBox[
+      StyleBox[
+       RowBox[{
+        StyleBox["d",
+         FontSlant->"Plain"], "t"}]], " "], 
+     StyleBox[
+      RowBox[{
+       StyleBox["d",
+        FontSlant->"Plain"], "s"}]]],
+    FontSize->24], TraditionalForm]],ExpressionUUID->
+  "dfb0c4ab-5b85-4ea1-a0cb-3ab89b30e9f5"],
+ " = ",
+ StyleBox["A\t\[DoubleLeftRightArrow]\t t = A s + B    \[Checkmark]\n\n",
+  FontSlant->"Italic"]
+}], "Text",
+ CellChangeTimes->{{3.824896472541128*^9, 3.824896485668322*^9}, {
+   3.824896545061404*^9, 3.824897036602523*^9}, {3.824897552983835*^9, 
+   3.824897808022234*^9}, {3.824897898019199*^9, 3.8248979035620947`*^9}, {
+   3.824897940734344*^9, 3.824898096096656*^9}, {3.824898342748007*^9, 
+   3.824898628131166*^9}, {3.8248988276646357`*^9, 3.824898869318913*^9}, 
+   3.824898913007318*^9, 3.8248990149889812`*^9, {3.824899119777096*^9, 
+   3.824899196098748*^9}, {3.8248993183138733`*^9, 3.824899318323801*^9}, {
+   3.824899349872368*^9, 3.8248993551800127`*^9}, {3.8248993954163427`*^9, 
+   3.824899450898378*^9}, {3.824899583228718*^9, 3.824899633485577*^9}, {
+   3.824899807876515*^9, 3.82489983509967*^9}, {3.8248998666519403`*^9, 
+   3.8248998926486692`*^9}, {3.824900066929335*^9, 3.824900072790457*^9}, {
+   3.824900103700357*^9, 3.8249001433513193`*^9}, {3.824900221946356*^9, 
+   3.824900228696228*^9}, {3.8249054084775467`*^9, 3.824905473281226*^9}, {
+   3.824905516197204*^9, 3.8249056388983803`*^9}, {3.824905899542389*^9, 
+   3.824905899555002*^9}, {3.8249059326568193`*^9, 3.824906311987267*^9}, {
+   3.824906457981494*^9, 3.8249065297965927`*^9}, {3.824906564075186*^9, 
+   3.824906564088942*^9}, {3.8249066097813272`*^9, 3.8249066551063557`*^9}, {
+   3.824906708549716*^9, 3.824906712257639*^9}, {3.824906956397348*^9, 
+   3.824906996687711*^9}, {3.824907191533207*^9, 3.824907199624675*^9}, {
+   3.824907302642036*^9, 3.82490730812506*^9}, {3.824907454752787*^9, 
+   3.824907548048785*^9}, 3.824907677960413*^9, {3.824907728969363*^9, 
+   3.824907862107483*^9}, {3.824907893338105*^9, 3.824907896221929*^9}, {
+   3.824907952793693*^9, 3.824907995700103*^9}, {3.8249154038422422`*^9, 
+   3.824915455463601*^9}, {3.824915915351264*^9, 3.824915965472588*^9}, {
+   3.824916013066264*^9, 3.824916068107504*^9}, {3.824916110268785*^9, 
+   3.824916132923167*^9}, {3.82492729646377*^9, 3.82492730829817*^9}, {
+   3.824927384008032*^9, 3.824927390339191*^9}, {3.824927433950815*^9, 
+   3.824927579959033*^9}, {3.824927649311203*^9, 3.824927654876671*^9}, {
+   3.824927701792183*^9, 3.824927704963572*^9}, {3.824927770090952*^9, 
+   3.824927779274029*^9}, {3.824928106753007*^9, 3.824928155381031*^9}, {
+   3.824928331645966*^9, 3.824928411479035*^9}, {3.824928452276013*^9, 
+   3.824928597163643*^9}, {3.824928679193253*^9, 3.824928680159575*^9}, {
+   3.824928717511983*^9, 3.8249287190877657`*^9}, {3.824928761280244*^9, 
+   3.824928802933474*^9}, {3.82492891867376*^9, 3.824929056666033*^9}, {
+   3.824930875187377*^9, 3.8249309241266336`*^9}, {3.8249318660095053`*^9, 
+   3.8249319791425543`*^9}, {3.8249320324406643`*^9, 
+   3.8249321791549883`*^9}, {3.825426786664434*^9, 3.825427031174459*^9}, {
+   3.82542707382813*^9, 3.82542709215169*^9}, {3.825427133847335*^9, 
+   3.8254271898360977`*^9}, {3.8254272209691753`*^9, 3.825427230720955*^9}, {
+   3.825427262392222*^9, 3.825427411663721*^9}, {3.8254274738463793`*^9, 
+   3.825427576032885*^9}, {3.825427606902905*^9, 3.825427747616024*^9}, {
+   3.825427801344492*^9, 3.825427955641946*^9}, {3.82542807204005*^9, 
+   3.825428442199212*^9}, {3.82542847880236*^9, 3.825428609624651*^9}, {
+   3.825428728491927*^9, 3.8254289745420628`*^9}, {3.825429011407423*^9, 
+   3.825429066866775*^9}, {3.825429107890629*^9, 3.825429271736363*^9}, 
+   3.8254293259398193`*^9, {3.825429371179521*^9, 3.8254295182677803`*^9}, {
+   3.825429868051052*^9, 3.825429878962854*^9}, 3.825430125713995*^9, 
+   3.8254301561655893`*^9, 3.825430800320424*^9, {3.8254308458554993`*^9, 
+   3.825430865835689*^9}, {3.825430912683161*^9, 3.82543119533657*^9}, {
+   3.825431265874385*^9, 3.825431451981059*^9}, {3.8254314997968273`*^9, 
+   3.825431559759368*^9}, {3.8254316872241287`*^9, 3.825431772212983*^9}, {
+   3.825431837263612*^9, 3.825431885658587*^9}, {3.82543192632209*^9, 
+   3.825431929929902*^9}, {3.825438966466905*^9, 3.825438983484662*^9}, {
+   3.825439178966077*^9, 3.8254392272121067`*^9}, {3.82543929272859*^9, 
+   3.825439396230239*^9}, {3.825439432522972*^9, 3.82543947720924*^9}, {
+   3.825439518410494*^9, 3.825439772014607*^9}, {3.8254398138636227`*^9, 
+   3.8254403587446613`*^9}, {3.82544041760944*^9, 3.825440682941565*^9}, {
+   3.825440717706099*^9, 3.825440735076282*^9}, {3.825440773301174*^9, 
+   3.825441097964011*^9}, {3.825441207972641*^9, 3.825441230610745*^9}, {
+   3.825441271176621*^9, 3.825441287668186*^9}, {3.825441447113388*^9, 
+   3.825441501630485*^9}, {3.8254454847039347`*^9, 3.8254454847061033`*^9}, {
+   3.8316554032100677`*^9, 3.831655409566921*^9}, {3.831655441853712*^9, 
+   3.8316557369286833`*^9}, {3.8316558923878317`*^9, 3.831655906969143*^9}, {
+   3.831656200629283*^9, 3.8316563018538847`*^9}, {3.8316563543047943`*^9, 
+   3.831656672872436*^9}, {3.831656704666092*^9, 3.831656987095253*^9}, {
+   3.831657037900075*^9, 3.831657091811572*^9}, {3.831657123626232*^9, 
+   3.831657242967943*^9}, {3.831657275885284*^9, 3.83165728988612*^9}, {
+   3.831657324469203*^9, 3.831657375141158*^9}, {3.831657410041333*^9, 
+   3.831657472030465*^9}, {3.831756710775695*^9, 3.831756768663725*^9}, {
+   3.831756816006473*^9, 3.831756853942865*^9}, {3.831756950404188*^9, 
+   3.8317570425004063`*^9}, {3.8317571120488863`*^9, 3.831757112049589*^9}, {
+   3.831757153879449*^9, 3.831757306007442*^9}, {3.831908661896071*^9, 
+   3.831908886317647*^9}, {3.831908958052514*^9, 3.831908975849873*^9}, {
+   3.831909023461383*^9, 3.831909038794704*^9}, {3.8319090881053143`*^9, 
+   3.8319091896544456`*^9}, {3.831909221288743*^9, 3.831909252902255*^9}, {
+   3.83190934664005*^9, 3.831909420712789*^9}, {3.831909460495508*^9, 
+   3.831909869174788*^9}, {3.831909914696479*^9, 3.831909933933146*^9}, {
+   3.8319099855739098`*^9, 3.831910001344755*^9}, {3.831910037979096*^9, 
+   3.83191009526597*^9}, {3.831910135247698*^9, 3.8319101642513647`*^9}, {
+   3.831910202887143*^9, 3.8319103856821632`*^9}, {3.831910431335917*^9, 
+   3.831910454307415*^9}, {3.8319105064202433`*^9, 3.831910520437131*^9}, {
+   3.831910682129808*^9, 3.831910685502614*^9}, {3.831910723331407*^9, 
+   3.831910932314486*^9}, {3.8319109687466908`*^9, 3.8319109783285418`*^9}, {
+   3.831911059491745*^9, 3.831911081562635*^9}, 3.831911124360873*^9, {
+   3.831911159127101*^9, 3.831911507457127*^9}, {3.831911545528781*^9, 
+   3.831911612874669*^9}, {3.831911645930127*^9, 3.8319116954967012`*^9}, {
+   3.831911742503824*^9, 3.831911871315464*^9}, {3.8395163647607203`*^9, 
+   3.839516382242297*^9}, {3.8395218469899883`*^9, 3.83952203981437*^9}, 
+   3.839522074869976*^9, 3.839523058991652*^9, {3.839525135609065*^9, 
+   3.839525135611895*^9}},ExpressionUUID->"cdec4933-b725-48c5-aedb-\
+b3436ba49b80"]
+},
+ScreenStyleEnvironment->"Printout",
+WindowToolbars->{"RulerBar", "EditBar"},
+WindowSize->{810, 1133},
+WindowMargins->{{Automatic, 287}, {Automatic, 90}},
+PrintingCopies->1,
+PrintingStartingPageNumber->1,
+PrintingPageRange->{1, Automatic},
+PageHeaders->{{
+   Cell[
+    TextData[{
+      StyleBox[
+       CounterBox["Page"], "PageNumber"], "   ", "|", " ", 
+      ValueBox["FileName"]}], "Header", 
+    CellMargins -> {{0, Inherited}, {Inherited, Inherited}}], None, None}, {
+  None, None, 
+   Cell[
+    TextData[{
+      ValueBox["FileName"], " ", "|", "   ", 
+      StyleBox[
+       CounterBox["Page"], "PageNumber"]}], "Header", 
+    CellMargins -> {{Inherited, 0}, {Inherited, Inherited}}]}},
+PageFooters->{{None, None, None}, {None, None, None}},
+PageHeaderLines->{False, False},
+PageFooterLines->{False, False},
+PrintingOptions->{"FacingPages"->True,
+"FirstPageFace"->Right,
+"FirstPageFooter"->True,
+"FirstPageHeader"->False},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]], 
+   Cell[
+    StyleData["Section"], CellFrame -> {{0, 0}, {0, 0}}, FontFamily -> 
+    "Arial", FontWeight -> "Regular", FontSlant -> "Plain", 
+    FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}, 
+    PrivateFontOptions -> {"FontPostScriptName" -> "Automatic"}, FontColor -> 
+    RGBColor[0., 0., 0.]], 
+   Cell[
+    StyleData["Text"], CellDingbat -> None, FontFamily -> "Arial", FontSize -> 
+    18, FontWeight -> "Plain", FontSlant -> "Plain", FontTracking -> "Plain", 
+    FontVariations -> {
+     "Outline" -> False, "Shadow" -> False, "StrikeThrough" -> False, 
+      "Underlight" -> None, "Underline" -> False}, 
+    PrivateFontOptions -> {"FontPostScriptName" -> "Automatic"}, FontColor -> 
+    RGBColor[0., 0., 0.], Background -> None], 
+   Cell[
+    StyleData["Code"], FontFamily -> "Arial", FontSize -> 18, FontWeight -> 
+    "Regular", FontSlant -> "Plain", FontTracking -> "Plain", 
+    FontVariations -> {
+     "Outline" -> False, "Shadow" -> False, "StrikeThrough" -> False, 
+      "Underlight" -> None, "Underline" -> False}, 
+    PrivateFontOptions -> {"FontPostScriptName" -> "Automatic"}, FontColor -> 
+    RGBColor[0., 0., 0.]], 
+   Cell[
+    StyleData["Subsection"], FontSize -> 20, FontWeight -> "Bold", FontColor -> 
+    RGBColor[0, 0, 1]]}, Visible -> False, FrontEndVersion -> 
+  "12.1 for Mac OS X x86 (64-bit) (June 19, 2020)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"ce329e15-500f-40b5-9839-e8eb59afa843"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[400, 13, 39835, 1467, 899, "Text",ExpressionUUID->"cdec4933-b725-48c5-aedb-b3436ba49b80"]
+}
+]
+*)
+
