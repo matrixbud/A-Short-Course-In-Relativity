@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     73909,       2079]
-NotebookOptionsPosition[     73237,       2057]
-NotebookOutlinePosition[     73953,       2081]
-CellTagsIndexPosition[     73910,       2078]
+NotebookDataLength[     79292,       2234]
+NotebookOptionsPosition[     78620,       2212]
+NotebookOutlinePosition[     79336,       2236]
+CellTagsIndexPosition[     79293,       2233]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,28 +23,45 @@ Cell[TextData[{
   FontColor->RGBColor[0., 0., 0.9981841763942931]],
  "  (not in book, but needed).  Let ",
  StyleBox["\[CapitalDelta]",
-  FontWeight->"Bold"],
+  FontColor->RGBColor[1, 0, 1]],
  " = det ",
- StyleBox["G,",
+ StyleBox["G ",
+  FontSlant->"Italic"],
+ "be the ",
+ StyleBox["determinant of ",
+  FontWeight->"Bold"],
+ StyleBox["G",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ StyleBox[",",
   FontSlant->"Italic"],
  " where ",
- StyleBox["G = (",
-  FontWeight->"Bold"],
+ StyleBox["G",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 1]],
+ " = (",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["g", 
-    RowBox[{"a", " ", "b"}]], TraditionalForm]],
-  FontWeight->"Bold",ExpressionUUID->"defc7756-7d85-4765-a81d-dd29e86d9211"],
- StyleBox[")",
-  FontWeight->"Bold"],
- " is the metric tensor matrix. The ",
+   StyleBox[
+    SubscriptBox["g", 
+     RowBox[{"a", " ", "b"}]],
+    FontWeight->"Plain"], TraditionalForm]],ExpressionUUID->
+  "defc7756-7d85-4765-a81d-dd29e86d9211"],
+ ") ",
+ "is the metric tensor matrix. The ",
  StyleBox["minor",
   FontWeight->"Bold"],
  ", ",
  Cell[BoxData[
   FormBox[
-   SuperscriptBox["m", 
-    RowBox[{"a", " ", "b"}]], TraditionalForm]],
+   StyleBox[
+    SuperscriptBox[
+     StyleBox["m",
+      FontWeight->"Plain"], 
+     StyleBox[
+      RowBox[{"a", " ", "b"}],
+      FontWeight->"Plain"]],
+    FontColor->RGBColor[1, 0, 1]], TraditionalForm]],
   FontWeight->"Bold",ExpressionUUID->"b839fdb9-d74e-48f2-bb0a-8cbc13a2f0e7"],
  ",  for element ",
  Cell[BoxData[
@@ -78,7 +95,7 @@ Cell[TextData[{
      StyleBox[
       RowBox[{"a", " ", "b"}],
       FontSlant->"Italic"]],
-    FontWeight->"Bold"], TraditionalForm]],ExpressionUUID->
+    FontColor->RGBColor[1, 0, 1]], TraditionalForm]],ExpressionUUID->
   "05fb46ab-fad8-4d19-891e-8715b5d02322"],
  " = ",
  Cell[BoxData[
@@ -148,10 +165,18 @@ form \n",
       SubscriptBox["a", "N"], " ", 
       SubscriptBox["b", "N"]}]], " ", " "}], TraditionalForm]],ExpressionUUID->
   "79a737a8-6350-4293-92e5-76f1ce38d13a"],
- "where every factor is in a distinct row and column. This definition is \
-somewhat complicated to state and even more complicated to express \
-mathematically, which we do now.\n\nThere are two formulas for \
-\[CapitalDelta] that we use here. The first one is to sum the products ",
+ "where the factors ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{
+     SubscriptBox["a", "k"], " ", 
+     SubscriptBox["b", "k"]}]], TraditionalForm]],ExpressionUUID->
+  "b726ad88-05f5-457e-9450-e721e97d7e3e"],
+ " are in distinct rows and columns. This definition is somewhat complicated \
+to state and even more complicated to express mathematically, which we do \
+now.\n\nThere are two formulas for \[CapitalDelta] that we use here. The \
+first one is to sum the products ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["g", 
@@ -162,8 +187,9 @@ mathematically, which we do now.\n\nThere are two formulas for \
    SuperscriptBox["c", 
     RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
   "f8fb718d-1245-4efa-aa80-f9e9828a5868"],
- " across row a. However, there is a problem on how to express this. In \
-non-Einstein notation, we can write\n\t\[CapitalDelta] = ",
+ " across row a. However, we have to be careful on how to express this in \
+Einstein notation. In non-Einstein notation, we can write\n\t\[CapitalDelta] \
+= ",
  Cell[BoxData[
   FormBox[
    UnderoverscriptBox["\[CapitalSigma]", 
@@ -194,11 +220,11 @@ non-Einstein notation, we can write\n\t\[CapitalDelta] = ",
      RowBox[{"a", " ", "b"}]]}], TraditionalForm]],
   FontColor->GrayLevel[0],ExpressionUUID->
   "4d80e900-650b-44d4-b783-7852be5ccb94"],
- " sums over all rows and we end up with \n\[CapitalDelta] +  ... + \
-\[CapitalDelta], ",
+ " sums over not just row a, but over all rows, which results in  \
+\[CapitalDelta] +  ... + \[CapitalDelta], ",
  StyleBox["N",
   FontSlant->"Italic"],
- " times:\n\t",
+ " times. Thus, in Einstein notation we express this sum as\n\t",
  Cell[BoxData[
   FormBox[
    SubscriptBox["g", 
@@ -213,7 +239,7 @@ non-Einstein notation, we can write\n\t\[CapitalDelta] = ",
  " = ",
  StyleBox["N",
   FontSlant->"Italic"],
- " \[CapitalDelta].  \t\t\t\t\t\t\t\t\t\t\t\t     (a)\n\nA similar formula \
+ " \[CapitalDelta].  \t\t\t\t\t\t\t\t\t\t\t\t     (a)\n\nA related formula \
 is:\n\t",
  Cell[BoxData[
   FormBox[
@@ -396,18 +422,25 @@ stated in words, above:\n\t\[CapitalDelta] \[Congruent] ",
   FontWeight->"Bold"],
  Cell[BoxData[
   FormBox[
-   StyleBox[
-    SuperscriptBox["\[Epsilon]", 
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
      RowBox[{
-      RowBox[{
-       SubscriptBox["b", "1"], " ", "..."}], " ", 
-      SubscriptBox["b", "N"]}]],
-    FontSize->18,
-    FontWeight->"Bold"], TraditionalForm]], "Input",ExpressionUUID->
+      SubscriptBox["b", "1"], " ", "..."}], " ", 
+     SubscriptBox["b", "N"]}]], TraditionalForm]], "Input",
+  FontSize->18,
+  FontWeight->"Plain",
+  FontColor->RGBColor[1, 0, 1],ExpressionUUID->
   "3f25883f-96b0-4e09-b6b8-a2573b600fed"],
  StyleBox[", ",
   FontWeight->"Bold"],
- " that we now explain. \n\nThe indices ",
+ " which we now explain. \n\nThis formula for \[CapitalDelta] uses Einstein \
+notation to sum over all of the different combinations of indices ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["b", "k"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "b44f53a0-71a9-44e6-bee7-6a2ad530dfc6"],
+ ".  The indices ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["b", "k"], TraditionalForm]],ExpressionUUID->
@@ -431,7 +464,7 @@ stated in words, above:\n\t\[CapitalDelta] \[Congruent] ",
     FontWeight->"Plain"], TraditionalForm]], "Input",ExpressionUUID->
   "02257fb5-e61d-4748-8867-008c7381e512"],
  " is defined to be zero unless each integer appears exactly once; that is, \
-unless \n",
+unless ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["b", "1"], TraditionalForm]],ExpressionUUID->
@@ -441,9 +474,7 @@ unless \n",
   FormBox[
    SubscriptBox["b", "N"], TraditionalForm]],ExpressionUUID->
   "9d647abe-f656-4c84-9a5b-25835e662c6d"],
- " is a ",
- "permutation",
- " of 1, 2, ..., ",
+ " is a permutation of 1, 2, ..., ",
  StyleBox["N",
   FontSlant->"Italic"],
  ". For permutations, its value is defined as +1 for ",
@@ -458,7 +489,7 @@ odd permutation because it requires just one swap. 1, 3, 4, 2 is an even \
 permutation. So, in the determinant for ",
  StyleBox["N",
   FontSlant->"Italic"],
- " = 3, ",
+ " = 3, the product ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["g", "11"], TraditionalForm]],ExpressionUUID->
@@ -473,7 +504,7 @@ permutation. So, in the determinant for ",
   FormBox[
    SubscriptBox["g", "33"], TraditionalForm]],ExpressionUUID->
   "016f5413-332a-4308-a6b8-2e710db1f014"],
- " would (correctly) be preceded by a plus sign, represented by ",
+ " is preceded by a plus sign, represented by ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["\[Epsilon]", 
@@ -487,7 +518,7 @@ permutation. So, in the determinant for ",
   FormBox[
    SuperscriptBox["\[Epsilon]", "123"], TraditionalForm]],ExpressionUUID->
   "e6c5ee81-1fa9-44f2-a6e2-5c63fbae4097"],
- " and ",
+ ", and the product  ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["g", "11"], TraditionalForm]],ExpressionUUID->
@@ -502,12 +533,21 @@ permutation. So, in the determinant for ",
   FormBox[
    SubscriptBox["g", "32"], TraditionalForm]],ExpressionUUID->
   "976dc1bc-f106-4201-9b69-3352d64271a4"],
- " would be preceded by a negative sign, ",
+ " is preceded by a negative sign, ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["\[Epsilon]", "132"], TraditionalForm]],ExpressionUUID->
   "0cef16e9-ef83-4cbd-a6bc-fd2655819771"],
- ". \n\nWe call it the Levi-Civita ",
+ ". \n\nWe call  ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["b", "1"], " ", "..."}], " ", 
+     SubscriptBox["b", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "211c2569-ef68-451b-91b9-b4e780c44708"],
+ "  the Levi-Civita ",
  StyleBox["symbol",
   FontSlant->"Italic"],
  " because it is a pseudo-tensor, almost a tensor except that it reverses \
@@ -617,12 +657,13 @@ following attempt at a cofactor expression:\n\t",
 \[Dash] ",
  StyleBox["N",
   FontSlant->"Italic"],
- "; that is, only when none of the ",
+ ", and",
+ " so none of the non-zero terms have any ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["k", "a"], TraditionalForm]],ExpressionUUID->
   "2569ce9e-8849-4ed0-8029-78bbeee9e200"],
- "\[CloseCurlyQuote]s equal ",
+ " equal to ",
  StyleBox["b",
   FontSlant->"Italic"],
  ". So, when the string is a permutation, every column appears in ",
@@ -966,12 +1007,79 @@ columns for the cofactor ",
  " and ",
  StyleBox["b",
   FontSlant->"Italic"],
- " are superscripts on LHS then they must be superscripts on RHS, but ",
+ " are superscripts on LHS then they must be superscripts on RHS, but index \
+",
  StyleBox["a",
   FontSlant->"Italic"],
- " is only a subscript on RHS. We can\[CloseCurlyQuote]t remedy this with \
-just a Kronecker delta, but a summation sign along with a Kronecker delta \
-works as follows:\n\t ",
+ " appears in the RHS subscripts as well as the RHS superscripts. We can try \
+to remedy this with a Kronecker delta, like \n\t(-1",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
+  "553eb812-5436-4aea-be25-a469cd28e3cb"],
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["\[Delta]", 
+    RowBox[{"a", " "}], "s"], TraditionalForm]],ExpressionUUID->
+  "1efd7b02-6f0d-48f4-ad82-b889d7ef99f0"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SubscriptBox["k", "1"], " ", "..."}], 
+       SubscriptBox["k", 
+        RowBox[{"a", "-", "1"}]], " ", "b", "  ", 
+       SubscriptBox["k", 
+        RowBox[{"a", "+", "1"}]]}], " ", "..."}], " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "38b5972a-5c9b-419d-90e5-0612b227c663"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"1", " ", 
+     SubscriptBox["k", "1"]}]], TraditionalForm]],ExpressionUUID->
+  "6aae0bef-ec83-473b-add6-93a881d052ad"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"s", "-", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"s", "-", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "61d431b8-a802-411c-8b1a-3508e7959515"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"s", "+", 
+     RowBox[{"1", " ", 
+      SubscriptBox["k", 
+       RowBox[{"s", "+", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
+  "942050a2-ec75-4cc4-adcb-27cefd3af3c7"],
+ " ... ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"N", " ", 
+     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
+  "32994763-b459-4094-b405-20e2a83d10f2"],
+ ".\n\nIn this attempt, index ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ " no longer appears among the subscripts of ",
+ StyleBox["g",
+  FontSlant->"Italic"],
+ ", ",
+ "but it",
+ " does appear as a subscript in the Kronecker delta. ",
+ "To solve that problem, we toss in a summation sign:\n\t ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["c", 
@@ -1059,16 +1167,20 @@ Einstein summation convention.\t\n\n",
  " = 5, and ",
  StyleBox["N",
   FontSlant->"Italic"],
- " = 7. Then we replace the sum by letting ",
+ " = 7. We can replace the sum by letting ",
  StyleBox["s",
   FontSlant->"Italic"],
  " = 3:\n\t ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["c", 
-    "\!\(\*StyleBox[\"\\\"\",FontSize->9,FontWeight->\"Regular\",FontColor->\
-RGBColor[0.9999694819562066, 0.9999237048905165, 0.9999694819562066]]\)3 \
-5\>"], TraditionalForm]],ExpressionUUID->
+    RowBox[{
+     StyleBox["\"\<\>",
+      FontSize->9,
+      FontWeight->"Regular",
+      FontColor->RGBColor[
+       0.9999694819562066, 0.9999237048905165, 0.9999694819562066]], "3", " ",
+      "5"}]], TraditionalForm]],ExpressionUUID->
   "58c77273-fa02-45e7-a1f4-af7bbc6b9422"],
  " \[Congruent] (-1",
  Cell[BoxData[
@@ -1172,8 +1284,7 @@ column 5. \n\nThis expression is preceded by ",
  " = +1 because the number of pairwise swaps for ",
  StyleBox["b",
   FontSlant->"Italic"],
- "=",
- "5 to be the fifth superscript differs by two swaps from it being the 3rd \
+ "=5 to be the fifth superscript differs by two swaps from it being the 3rd \
 superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
  Cell[BoxData[
   FormBox[
@@ -1272,7 +1383,7 @@ superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
     RowBox[{"N", " ", 
      SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
   "b1f8753f-0692-4d55-86b8-f78999e95621"],
- " + ... \n\t\t+\.10 ",
+ " \n\t\t+ ... \n\t\t+\.10 ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
@@ -1335,7 +1446,7 @@ superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
     RowBox[{"N", " ", 
      SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
   "e6e86037-6d04-497f-8f2e-113f2a575489"],
- " + ... \n\t\t+  ",
+ " \n\t\t+ ... \n\t\t+  ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
@@ -1450,7 +1561,29 @@ superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
     RowBox[{"N", " ", 
      SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
   "b60f08f2-2674-49a4-a101-d67f8f44d7b8"],
- ".\t     (g)\n\n\nTo see that we need the factor ",
+ ".\t     (g)\n\nTerms with factor ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}], 
+    RowBox[{"b", "-", "s"}]], TraditionalForm]],ExpressionUUID->
+  "29b9e985-ad68-4293-b742-2d0230cf925e"],
+ " in equation (g) are non-zero only when ",
+ StyleBox["s",
+  FontSlant->"Italic"],
+ " = ",
+ StyleBox["a.",
+  FontSlant->"Italic"],
+ " To see that we need the factor ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}], 
+    RowBox[{"b", "-", "s"}]], TraditionalForm]],ExpressionUUID->
+  "9579c3fd-fe4a-4595-a836-be97a09eccde"],
+ " = ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox[
@@ -1627,8 +1760,7 @@ superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
  " = ",
  StyleBox["a",
   FontSlant->"Italic"],
- ", and this completes the solution:",
- " \n\t",
+ ", and this completes the solution: \n\t",
  Cell[BoxData[
   FormBox[
    SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
@@ -2051,8 +2183,31 @@ superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
    3.853514068043785*^9}, {3.853514104454953*^9, 3.85351412668262*^9}, {
    3.853514188050782*^9, 3.853514343769842*^9}, {3.853514479994404*^9, 
    3.8535145839176407`*^9}, {3.853514655912015*^9, 3.8535146563592863`*^9}, {
-   3.853514749265374*^9, 3.8535147516839542`*^9}, 
-   3.8535148409843884`*^9},ExpressionUUID->"d1b4b3e2-350f-4710-9acc-\
+   3.853514749265374*^9, 3.8535147516839542`*^9}, 3.8535148409843884`*^9, {
+   3.897297869472875*^9, 3.897297889195763*^9}, {3.8972981774813423`*^9, 
+   3.897298361854516*^9}, {3.8972984614534073`*^9, 3.89729846772121*^9}, {
+   3.897298542040596*^9, 3.897298566267826*^9}, {3.897298610999549*^9, 
+   3.8972986968086042`*^9}, {3.8972987941876783`*^9, 3.897298795412013*^9}, {
+   3.897299039433115*^9, 3.897299082875046*^9}, {3.897299318894147*^9, 
+   3.897299355174408*^9}, {3.897299389690794*^9, 3.897299426101454*^9}, {
+   3.897299476544191*^9, 3.8972994823629103`*^9}, {3.897299521827435*^9, 
+   3.897299604734693*^9}, {3.897299650724362*^9, 3.897299699899259*^9}, {
+   3.897299767546623*^9, 3.89729977902717*^9}, {3.897300006991789*^9, 
+   3.897300025016904*^9}, {3.897300442496977*^9, 3.8973005004867573`*^9}, {
+   3.897300650498159*^9, 3.897300741690586*^9}, {3.897300869263035*^9, 
+   3.897300900229311*^9}, 3.897300971569803*^9, {3.897301088720809*^9, 
+   3.897301223388879*^9}, {3.897301256554076*^9, 3.897301279946581*^9}, {
+   3.897301313497682*^9, 3.897301406386372*^9}, {3.89730144511654*^9, 
+   3.897301464642173*^9}, {3.8973015297758207`*^9, 3.897301539015164*^9}, {
+   3.897301674190596*^9, 3.89730167569189*^9}, {3.8973342474941072`*^9, 
+   3.897334347382966*^9}, {3.897334382234509*^9, 3.897334383979694*^9}, {
+   3.897334552742815*^9, 3.89733461317024*^9}, {3.8973347571964083`*^9, 
+   3.897334803104459*^9}, {3.897334850426193*^9, 3.8973348627666473`*^9}, {
+   3.8973349116835537`*^9, 3.8973349124389763`*^9}, {3.897334943150778*^9, 
+   3.897334944725965*^9}, {3.897335014534355*^9, 3.897335020389884*^9}, {
+   3.8973353787298326`*^9, 3.8973353942127113`*^9}, 3.897335693279543*^9, {
+   3.8973358159281893`*^9, 
+   3.897335922618579*^9}},ExpressionUUID->"d1b4b3e2-350f-4710-9acc-\
 bbb4b77689e0"]
 },
 WindowToolbars->{"RulerBar", "EditBar"},
@@ -2060,12 +2215,12 @@ WindowSize->{808, 1185},
 WindowMargins->{{Automatic, 516}, {Automatic, 25}},
 PrintingCopies->1,
 PrintingPageRange->{1, Automatic},
-FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
+FrontEndVersion->"13.0 for Mac OS X ARM (64-bit) (February 4, 2022)",
 StyleDefinitions->Notebook[{
    Cell[
     StyleData[StyleDefinitions -> "Bud's Documentation.nb"]]}, Visible -> 
   False, FrontEndVersion -> 
-  "13.0 for Mac OS X x86 (64-bit) (December 2, 2021)", StyleDefinitions -> 
+  "13.0 for Mac OS X ARM (64-bit) (February 4, 2022)", StyleDefinitions -> 
   "PrivateStylesheetFormatting.nb"],
 ExpressionUUID->"6725351a-9070-490e-8ec2-321b07740e61"
 ]
@@ -2080,7 +2235,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 72675, 2035, 3136, "Text",ExpressionUUID->"d1b4b3e2-350f-4710-9acc-bbb4b77689e0"]
+Cell[558, 20, 78058, 2190, 3309, "Text",ExpressionUUID->"d1b4b3e2-350f-4710-9acc-bbb4b77689e0"]
 }
 ]
 *)
