@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     79292,       2234]
-NotebookOptionsPosition[     78620,       2212]
-NotebookOutlinePosition[     79336,       2236]
-CellTagsIndexPosition[     79293,       2233]
+NotebookDataLength[     73763,       1999]
+NotebookOptionsPosition[     73092,       1977]
+NotebookOutlinePosition[     73807,       2001]
+CellTagsIndexPosition[     73764,       1998]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -47,8 +47,7 @@ Cell[TextData[{
      RowBox[{"a", " ", "b"}]],
     FontWeight->"Plain"], TraditionalForm]],ExpressionUUID->
   "defc7756-7d85-4765-a81d-dd29e86d9211"],
- ") ",
- "is the metric tensor matrix. The ",
+ ") is the metric tensor matrix. The ",
  StyleBox["minor",
   FontWeight->"Bold"],
  ", ",
@@ -137,8 +136,15 @@ Cell[TextData[{
  " .\n\n",
  StyleBox["Solution",
   FontColor->RGBColor[0, 0, 1]],
- "  By definition, \[CapitalDelta] is the sum of all possible products of the \
-form \n",
+ "  Note: This derivation is valid for any matrix ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["g", 
+    RowBox[{"a", " ", "b"}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e732b8ad-cbf1-4793-9d7a-7c3688111451"],
+ ", not just the metric tensor. \n\nBy definition, \[CapitalDelta] is the sum \
+of all possible products of the form \n",
  Cell[BoxData[
   FormBox[
    SuperscriptBox[
@@ -220,8 +226,11 @@ Einstein notation. In non-Einstein notation, we can write\n\t\[CapitalDelta] \
      RowBox[{"a", " ", "b"}]]}], TraditionalForm]],
   FontColor->GrayLevel[0],ExpressionUUID->
   "4d80e900-650b-44d4-b783-7852be5ccb94"],
- " sums over not just row a, but over all rows, which results in  \
-\[CapitalDelta] +  ... + \[CapitalDelta], ",
+ " sums over not just row ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ ", but over all rows, which results in  \[CapitalDelta] +  ... + \
+\[CapitalDelta], ",
  StyleBox["N",
   FontSlant->"Italic"],
  " times. Thus, in Einstein notation we express this sum as\n\t",
@@ -437,8 +446,7 @@ stated in words, above:\n\t\[CapitalDelta] \[Congruent] ",
 notation to sum over all of the different combinations of indices ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["b", "k"], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   SubscriptBox["b", "k"], TraditionalForm]],ExpressionUUID->
   "b44f53a0-71a9-44e6-bee7-6a2ad530dfc6"],
  ".  The indices ",
  Cell[BoxData[
@@ -653,12 +661,11 @@ following attempt at a cofactor expression:\n\t",
        RowBox[{"a", "+", "1"}]]}], " ", "..."}], " ", 
     SubscriptBox["k", "N"]}], TraditionalForm]],ExpressionUUID->
   "c4be2431-ea01-4eec-aa52-61617d0f7b20"],
- ", but \[Epsilon] is non-zero only for strings that are permutations of 1 \
+ ", and \[Epsilon] is non-zero only for strings that are permutations of 1 \
 \[Dash] ",
- StyleBox["N",
+ StyleBox["N. S",
   FontSlant->"Italic"],
- ", and",
- " so none of the non-zero terms have any ",
+ "o, none of the non-zero terms have any ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["k", "a"], TraditionalForm]],ExpressionUUID->
@@ -666,68 +673,49 @@ following attempt at a cofactor expression:\n\t",
  " equal to ",
  StyleBox["b",
   FontSlant->"Italic"],
- ". So, when the string is a permutation, every column appears in ",
+ ". Thus, when a string is a permutation, every column except ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ " appears in ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     RowBox[{
      RowBox[{
       RowBox[{
-       SubscriptBox["k", "1"], " ", "..."}], 
-      SubscriptBox["k", 
-       RowBox[{"a", "-", "1"}]], " ", "b", "  ", 
-      SubscriptBox["k", 
-       RowBox[{"a", "+", "1"}]]}], " ", "..."}], " ", 
-    SubscriptBox["k", "N"]}], TraditionalForm]],ExpressionUUID->
-  "b1cdeb93-d7f1-45e7-ac01-f6873c379644"],
- " and, so, every column except ",
- StyleBox["b",
-  FontSlant->"Italic"],
- " appears in ",
- Cell[BoxData[
-  FormBox[
-   RowBox[{" ", 
-    RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{
-        FormBox[
-         SubscriptBox["g", 
-          RowBox[{"1", " ", 
-           SubscriptBox["k", "1"]}]],
-         TraditionalForm], "..."}], 
        FormBox[
         SubscriptBox["g", 
-         RowBox[{"a", "-", 
-          RowBox[{"1", " ", 
-           SubscriptBox["k", 
-            RowBox[{"a", "-", "1"}]]}]}]],
-        TraditionalForm], " ", 
-       FormBox[
-        SubscriptBox["g", 
-         RowBox[{"a", "+", 
-          RowBox[{"1", " ", 
-           SubscriptBox["k", 
-            RowBox[{"a", "+", "1"}]]}]}]],
-        TraditionalForm]}], "..."}], 
-     FormBox[
-      SubscriptBox["g", 
-       RowBox[{"N", " ", 
-        SubscriptBox["k", "N"]}]],
-      TraditionalForm]}]}], TraditionalForm]],ExpressionUUID->
+         RowBox[{"1", " ", 
+          SubscriptBox["k", "1"]}]],
+        TraditionalForm], "..."}], 
+      FormBox[
+       SubscriptBox["g", 
+        RowBox[{"a", "-", 
+         RowBox[{"1", " ", 
+          SubscriptBox["k", 
+           RowBox[{"a", "-", "1"}]]}]}]],
+       TraditionalForm], " ", 
+      FormBox[
+       SubscriptBox["g", 
+        RowBox[{"a", "+", 
+         RowBox[{"1", " ", 
+          SubscriptBox["k", 
+           RowBox[{"a", "+", "1"}]]}]}]],
+       TraditionalForm]}], "..."}], 
+    FormBox[
+     SubscriptBox["g", 
+      RowBox[{"N", " ", 
+       SubscriptBox["k", "N"]}]],
+     TraditionalForm]}], TraditionalForm]],ExpressionUUID->
   "21f39700-e32a-4ca8-b03c-6ef3a5d1b96f"],
- ". So far, so good. (Note that ",
+ ". So far, so good. \n\nIndex ",
  StyleBox["b",
   FontSlant->"Italic"],
- " must appear in the superscript of \[Epsilon] because the Levi-Civita \
-symbol is only defined for strings of length ",
- StyleBox["N",
+ " is in the ",
+ StyleBox["a",
   FontSlant->"Italic"],
- ").\n\nIs ",
- StyleBox["b",
-  FontSlant->"Italic"],
- " in a superscript position that will produce the correct sign for the term \
-\n",
+ "th superscript position. ",
+ "Will that produce the correct sign for the term ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["g", 
@@ -759,101 +747,7 @@ symbol is only defined for strings of length ",
     RowBox[{"N", " ", 
      SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
   "1eecdac7-9a9a-440d-8ce7-a155ae7bb033"],
- "? Consider the case where ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["k", "1"], TraditionalForm]],ExpressionUUID->
-  "d9f06a96-300d-47af-a4e4-cfd03629d6de"],
- "=1, ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["k", "2"], TraditionalForm]],ExpressionUUID->
-  "b85bef4a-a327-4252-9cf0-8b80f1e047f9"],
- "=2, .... ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["k", "N"], TraditionalForm]],ExpressionUUID->
-  "80c806d9-8694-413f-8f3d-5da12f33133c"],
- "=",
- StyleBox["N.",
-  FontSlant->"Italic"],
- " Then we have   ",
- Cell[BoxData[
-  FormBox[
-   SuperscriptBox["\[Epsilon]", 
-    RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{
-        RowBox[{"1", " ", "..."}], "a"}], "-", 
-       RowBox[{"1", " ", "b", "  ", "a"}], "+", "1"}], " ", "..."}], " ", 
-     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
-  "8a8fa26c-df82-48b1-b4c1-b26917618e3c"],
- " ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["g", "11"], TraditionalForm]],ExpressionUUID->
-  "d2dfa5fd-584b-42d5-a2b1-11b94e2324eb"],
- " ... ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["g", 
-    RowBox[{"a", "-", 
-     RowBox[{"1", " ", "a"}], "-", "1"}]], TraditionalForm]],ExpressionUUID->
-  "1bddcca3-2291-4bdb-b153-469d0284f3e0"],
- " ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["g", 
-    RowBox[{"a", "+", 
-     RowBox[{"1", " ", "a"}], "+", "1"}]], TraditionalForm]],ExpressionUUID->
-  "5913552d-f296-4197-acca-4cad2d52e667"],
- " ... ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["g", 
-    RowBox[{"N", " ", "N"}]], TraditionalForm]],ExpressionUUID->
-  "a5d43046-efa6-4cbf-a829-3801f97b0987"],
- ", and the correct sign should be +1. Note that ",
- StyleBox["b",
-  FontSlant->"Italic"],
- " is in the ",
- StyleBox["a",
-  FontSlant->"Italic"],
- "th",
- StyleBox[" ",
-  FontSlant->"Italic"],
- "position of the superscript. If we put it in the ",
- StyleBox["b",
-  FontSlant->"Italic"],
- "th position, then we would have ",
- Cell[BoxData[
-  FormBox[
-   SuperscriptBox["\[Epsilon]", 
-    RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{
-        StyleBox["\"\<\>",
-         FontSize->9,
-         FontWeight->"Regular",
-         FontColor->RGBColor[
-          0.9999694819562066, 0.9999237048905165, 0.9999694819562066]], "1", 
-        " ", "2"}], "..."}], 
-      StyleBox["b",
-       FontSlant->"Italic"]}], "\[Dash]", 
-     RowBox[{
-      RowBox[{
-       RowBox[{
-        RowBox[{"1", 
-         StyleBox["b",
-          FontSlant->"Italic"], " ", 
-         StyleBox["b",
-          FontSlant->"Italic"]}], "+", "1"}], "..."}], " ", 
-      StyleBox["N",
-       FontSlant->"Italic"]}]}]], TraditionalForm]],ExpressionUUID->
-  "d8d146f3-2fa1-4123-9d05-fd39bf2879ba"],
- " = +1. It requires |",
+ "? It requires |",
  StyleBox["b",
   FontSlant->"Italic"],
  "\[Dash]",
@@ -863,10 +757,10 @@ symbol is only defined for strings of length ",
  StyleBox["b ",
   FontSlant->"Italic"],
  "from position ",
- StyleBox["a",
+ StyleBox["b",
   FontSlant->"Italic"],
  " to position ",
- StyleBox["b",
+ StyleBox["a",
   FontSlant->"Italic"],
  ". So, ",
  Cell[BoxData[
@@ -888,7 +782,7 @@ symbol is only defined for strings of length ",
      RowBox[{"-", "1"}], ")"}], 
     RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
   "c97f6e2d-75d9-4626-ab0a-c7082a401f1d"],
- ". In order to give ",
+ ". The term ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["g", "11"], TraditionalForm]],ExpressionUUID->
@@ -913,7 +807,15 @@ symbol is only defined for strings of length ",
    SubscriptBox["g", 
     RowBox[{"N", " ", "N"}]], TraditionalForm]],ExpressionUUID->
   "5c867c24-0950-42b5-9024-f5d03b096730"],
- " a coefficient of +1, we must precede it by ",
+ " should have a coefficient of +1. Since \[Epsilon] contains a factor of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}], 
+    RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
+  "037849bb-b667-45b7-9fbb-42dbf12c8556"],
+ ", we must precede this term by another ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox[
@@ -921,19 +823,7 @@ symbol is only defined for strings of length ",
      RowBox[{"-", "1"}], ")"}], 
     RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
   "d2285764-ca9b-4b4b-8a1e-9f1d7461fb87"],
- " ",
- Cell[BoxData[
-  FormBox[
-   SuperscriptBox["\[Epsilon]", 
-    RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{
-        RowBox[{"1", " ", "..."}], "a"}], "-", 
-       RowBox[{"1", " ", "b", "  ", "a"}], "+", "1"}], " ", "..."}], " ", 
-     "N"}]], TraditionalForm]],ExpressionUUID->
-  "67dc6a6f-d323-4903-8c7c-9db2305f5710"],
- ". So, we must modify our first attempt. We try\n\t",
+ ". We therefore modify our first attempt and try\n\t",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["c", 
@@ -1076,10 +966,8 @@ to remedy this with a Kronecker delta, like \n\t(-1",
  " no longer appears among the subscripts of ",
  StyleBox["g",
   FontSlant->"Italic"],
- ", ",
- "but it",
- " does appear as a subscript in the Kronecker delta. ",
- "To solve that problem, we toss in a summation sign:\n\t ",
+ ", but it now appears as a subscript in the Kronecker delta. To solve that \
+problem, we toss in a summation sign:\n\t ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["c", 
@@ -1148,14 +1036,15 @@ to remedy this with a Kronecker delta, like \n\t(-1",
     RowBox[{"N", " ", 
      SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
   "ac5c4bc0-22cd-4544-a3a6-9f7ad202ad91"],
- ".\t\t     (e)\nIn this summation we throw away all terms except when ",
+ ".\t\t     (e)\n\nIn this summation we throw away all terms except when ",
  StyleBox["s",
   FontSlant->"Italic"],
  " = ",
  StyleBox["a",
   FontSlant->"Italic"],
  ", making this identical to the prior expression while adhering to the \
-Einstein summation convention.\t\n\n",
+Einstein summation convention.\n\nSince this is a little confusing, we give \
+one example.\t\n\n",
  StyleBox["Example",
   FontColor->RGBColor[0, 0, 1]],
  "  To illustrate cofactor definition (e), let ",
@@ -1344,7 +1233,13 @@ superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
   FormBox[
    SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
   "bedfbaff-cccd-4577-a82f-42e26b794ff7"],
- "\[CapitalDelta]  =  ",
+ "\[CapitalDelta]  =   (-1",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{"b", "-", "1"}]], TraditionalForm]],ExpressionUUID->
+  "2488145a-3974-4ea6-9a5f-4d43a89937b4"],
+ " ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
@@ -1354,12 +1249,6 @@ superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
    SubscriptBox["g", 
     RowBox[{"1", " ", "b"}]], TraditionalForm]],ExpressionUUID->
   "bb6de388-ab59-4a8b-b2d4-fa9da591de57"],
- " (-1",
- Cell[BoxData[
-  FormBox[
-   SuperscriptBox[")", 
-    RowBox[{"b", "-", "1"}]], TraditionalForm]],ExpressionUUID->
-  "0a5a2edf-ca3b-456c-9063-0f455a7354f6"],
  " ",
  Cell[BoxData[
   FormBox[
@@ -1383,7 +1272,13 @@ superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
     RowBox[{"N", " ", 
      SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
   "b1f8753f-0692-4d55-86b8-f78999e95621"],
- " \n\t\t+ ... \n\t\t+\.10 ",
+ " \n\t\t+ ... \n\t\t+\.10   (-1",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
+  "fa033cdf-1fdb-45a2-984c-28ac614eb79e"],
+ " ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
@@ -1393,12 +1288,6 @@ superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
    SubscriptBox["g", 
     RowBox[{"a", " ", "b"}]], TraditionalForm]],ExpressionUUID->
   "1d873364-6903-4aa2-b372-27e4ce12aa1a"],
- " (-1",
- Cell[BoxData[
-  FormBox[
-   SuperscriptBox[")", 
-    RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
-  "9bb39567-5488-4fa4-834b-9c4f05d7de52"],
  " ",
  Cell[BoxData[
   FormBox[
@@ -1446,7 +1335,13 @@ superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
     RowBox[{"N", " ", 
      SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
   "e6e86037-6d04-497f-8f2e-113f2a575489"],
- " \n\t\t+ ... \n\t\t+  ",
+ " \n\t\t+ ... \n\t\t+   (-1",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{"b", "-", "N"}]], TraditionalForm]],ExpressionUUID->
+  "981a1941-4ffa-4936-8263-fea0ad32d375"],
+ " ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
@@ -1456,12 +1351,6 @@ superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
    SubscriptBox["g", 
     RowBox[{"N", " ", "b"}]], TraditionalForm]],ExpressionUUID->
   "ef5a1155-2067-4d89-87dc-c541c76966bf"],
- " (-1",
- Cell[BoxData[
-  FormBox[
-   SuperscriptBox[")", 
-    RowBox[{"b", "-", "N"}]], TraditionalForm]],ExpressionUUID->
-  "73b02a3f-0a75-4e93-9847-beb46fd91464"],
  " ",
  Cell[BoxData[
   FormBox[
@@ -1561,168 +1450,32 @@ superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
     RowBox[{"N", " ", 
      SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
   "b60f08f2-2674-49a4-a101-d67f8f44d7b8"],
- ".\t     (g)\n\nTerms with factor ",
- Cell[BoxData[
-  FormBox[
-   SuperscriptBox[
-    RowBox[{"(", 
-     RowBox[{"-", "1"}], ")"}], 
-    RowBox[{"b", "-", "s"}]], TraditionalForm]],ExpressionUUID->
-  "29b9e985-ad68-4293-b742-2d0230cf925e"],
- " in equation (g) are non-zero only when ",
- StyleBox["s",
-  FontSlant->"Italic"],
- " = ",
- StyleBox["a.",
-  FontSlant->"Italic"],
- " To see that we need the factor ",
- Cell[BoxData[
-  FormBox[
-   SuperscriptBox[
-    RowBox[{"(", 
-     RowBox[{"-", "1"}], ")"}], 
-    RowBox[{"b", "-", "s"}]], TraditionalForm]],ExpressionUUID->
-  "9579c3fd-fe4a-4595-a836-be97a09eccde"],
- " = ",
- Cell[BoxData[
-  FormBox[
-   SuperscriptBox[
-    RowBox[{"(", 
-     RowBox[{"-", "1"}], ")"}], 
-    RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
-  "ecc1cd4f-1047-4dd0-a5d2-88f558311c09"],
- " in equation (g), again consider\n ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["k", "1"], TraditionalForm]],ExpressionUUID->
-  "5e197209-77fe-44cd-b9f4-d43f8678613a"],
- "=1, ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["k", "2"], TraditionalForm]],ExpressionUUID->
-  "b6e3d9de-fa33-44e1-8352-21a274fa4ee8"],
- "=2, ..., ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["k", "N"], TraditionalForm]],ExpressionUUID->
-  "b911569d-0136-446f-aee6-8da075398cf1"],
- "=",
- StyleBox["N",
-  FontSlant->"Italic"],
- ". Then \n\t",
- Cell[BoxData[
-  FormBox[
-   SuperscriptBox["\[Epsilon]", 
-    RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{
-        SubscriptBox["k", "1"], "..."}], 
-       SubscriptBox["k", 
-        RowBox[{"a", "-", "1"}]], " ", "b", "  ", 
-       SubscriptBox["k", 
-        RowBox[{"a", "+", "1"}]]}], "..."}], " ", 
-     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
-  "d6b35985-62b0-4287-ab26-d54b3873c3be"],
- " ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["g", 
-    RowBox[{"1", " ", 
-     SubscriptBox["k", "1"]}]], TraditionalForm]],ExpressionUUID->
-  "c76679f8-978b-4777-bafd-5bf5dfa369c9"],
- "...",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["g", 
-    RowBox[{"a", "-", 
-     RowBox[{"1", " ", 
-      SubscriptBox["k", 
-       RowBox[{"a", "-", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
-  "d3b81cb8-5b6f-4f9d-8289-3e9afa01b060"],
- " ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["g", 
-    RowBox[{"a", " ", 
-     SubscriptBox["k", "a"]}]], TraditionalForm]],ExpressionUUID->
-  "cdd7d2e5-b9f3-4447-b7b8-838a7ab34b78"],
- " ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["g", 
-    RowBox[{"a", "+", 
-     RowBox[{"1", " ", 
-      SubscriptBox["k", 
-       RowBox[{"a", "+", "1"}]]}]}]], TraditionalForm]],ExpressionUUID->
-  "3766e17a-f7b5-4282-b2c6-d44e3d10da1c"],
- "... ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["g", 
-    RowBox[{"N", " ", 
-     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
-  "93f179e2-ee0f-4916-bb82-18641d479d29"],
- " \n\t= ",
- Cell[BoxData[
-  FormBox[
-   SuperscriptBox["\[Epsilon]", 
-    RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{
-        RowBox[{"1", " ", "..."}], "a"}], "-", 
-       RowBox[{"1", " ", "b", "  ", "a"}], "+", "1"}], " ", "..."}], " ", 
-     SubscriptBox["k", "N"]}]], TraditionalForm]],ExpressionUUID->
-  "a241b835-7f54-4492-a808-8bda889d8ae8"],
- " ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["g", "11"], TraditionalForm]],ExpressionUUID->
-  "01fc6a1d-0ccb-47a0-8a1b-f6ad5fb2cd0a"],
- " ... ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["g", 
-    RowBox[{"a", "-", 
-     RowBox[{"1", " ", "a"}], "-", "1"}]], TraditionalForm]],ExpressionUUID->
-  "a6fa38f4-68be-4fe4-af73-aa25f680dfa8"],
- " ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["g", 
-    RowBox[{"a", " ", "a"}]], TraditionalForm]],ExpressionUUID->
-  "9e8ca00c-707b-49c1-943b-155ede361d0c"],
- " ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["g", 
-    RowBox[{"a", "+", 
-     RowBox[{"1", " ", "a"}], "+", "1"}]], TraditionalForm]],ExpressionUUID->
-  "f28f1fd4-6373-4313-bb8f-e0a5597930ed"],
- " ... ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["g", 
-    RowBox[{"N", " ", "N"}]], TraditionalForm]],ExpressionUUID->
-  "9ae1736b-3a18-457b-9a85-4b94b079677e"],
- ".\n\nThe correct sign for this term is +1, so, in order to move superscript \
-",
- StyleBox["b",
-  FontSlant->"Italic"],
- " to position ",
- StyleBox["a",
-  FontSlant->"Italic"],
- " from position ",
- StyleBox["b",
-  FontSlant->"Italic"],
- ", the factor (-1",
+ ".\t     (g)\n\nObserve that we needed to toss in (-1",
  Cell[BoxData[
   FormBox[
    SuperscriptBox[")", 
     RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
-  "4187d532-04fc-487c-ac31-1c4da3f8806c"],
- " is needed.\n\nWe can simplify equation (g) by moving ",
+  "31d57c72-313d-49c5-9154-a1e5d8097e49"],
+ " terms again because when index ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ " is in position ",
+ StyleBox["a",
+  FontSlant->"Italic"],
+ ", we have to again compensate for the fact that \[Epsilon]",
+ " contains a (-1",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
+  "afaa3643-db5f-4aa0-bb67-c6ba804853ff"],
+ " factor.\n\nWe can simplify equation (g) by moving  (-1",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{"b", "-", "s"}]], TraditionalForm]],ExpressionUUID->
+  "182622dd-2c65-42d4-93f0-1ad8d15fb3e2"],
+ " ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["\[PartialD]", "c"], TraditionalForm]],ExpressionUUID->
@@ -1732,12 +1485,6 @@ superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
    SubscriptBox["g", 
     RowBox[{"s", " ", "b"}]], TraditionalForm]],ExpressionUUID->
   "a8575b33-bbb2-4c63-af73-97cb310612d6"],
- " (-1",
- Cell[BoxData[
-  FormBox[
-   SuperscriptBox[")", 
-    RowBox[{"b", "-", "s"}]], TraditionalForm]],ExpressionUUID->
-  "ae7504a9-06c3-4a50-80e3-800b7d05b00c"],
  " to the left of the summation sign. It becomes ",
  Cell[BoxData[
   FormBox[
@@ -1754,7 +1501,7 @@ superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
    SuperscriptBox[")", 
     RowBox[{"b", "-", "a"}]], TraditionalForm]],ExpressionUUID->
   "98b31d63-1f4a-41b8-a8fe-7599c645cc06"],
- " since the summations are all zero except when \n",
+ " since the summations are all zero except when ",
  StyleBox["s",
   FontSlant->"Italic"],
  " = ",
@@ -2206,13 +1953,31 @@ superscript.    \[FilledSmallSquare]\n\nFinally, we can compute ",
    3.8973349116835537`*^9, 3.8973349124389763`*^9}, {3.897334943150778*^9, 
    3.897334944725965*^9}, {3.897335014534355*^9, 3.897335020389884*^9}, {
    3.8973353787298326`*^9, 3.8973353942127113`*^9}, 3.897335693279543*^9, {
-   3.8973358159281893`*^9, 
-   3.897335922618579*^9}},ExpressionUUID->"d1b4b3e2-350f-4710-9acc-\
+   3.8973358159281893`*^9, 3.897335922618579*^9}, {3.897336170201858*^9, 
+   3.897336170355811*^9}, {3.897419570027803*^9, 3.8974197267158318`*^9}, {
+   3.8974197681277103`*^9, 3.897419801493141*^9}, {3.897420747336451*^9, 
+   3.897420879573278*^9}, {3.897421235634605*^9, 3.897421320200883*^9}, {
+   3.897421367509699*^9, 3.897421451253059*^9}, {3.897421485784656*^9, 
+   3.897421486429351*^9}, {3.897421616110561*^9, 3.897421665383363*^9}, {
+   3.897421867427848*^9, 3.897421925416779*^9}, {3.897421995068646*^9, 
+   3.897422084435371*^9}, {3.89742216389704*^9, 3.897422171107623*^9}, {
+   3.897422219755772*^9, 3.897422238690695*^9}, {3.89742241023904*^9, 
+   3.897422410690201*^9}, {3.897422629800499*^9, 3.8974226333121243`*^9}, {
+   3.897422822592629*^9, 3.897422834683461*^9}, {3.897422899638801*^9, 
+   3.89742292026364*^9}, 3.8974230319453993`*^9, {3.897423096315292*^9, 
+   3.897423097980097*^9}, {3.897423139822956*^9, 3.897423157936493*^9}, {
+   3.89742321635259*^9, 3.897423268477659*^9}, {3.897423463015279*^9, 
+   3.897423488981564*^9}, 3.897424573258503*^9, {3.8974248997706747`*^9, 
+   3.8974250772468243`*^9}, {3.897425113668109*^9, 3.897425203698578*^9}, {
+   3.897425239447173*^9, 3.897425249481701*^9}, 3.897425310245248*^9, 
+   3.897425376736339*^9, {3.897425455459669*^9, 3.897425467745202*^9}, {
+   3.897425626058214*^9, 3.897425626379698*^9}, {3.897425666546946*^9, 
+   3.897425667715239*^9}},ExpressionUUID->"d1b4b3e2-350f-4710-9acc-\
 bbb4b77689e0"]
 },
 WindowToolbars->{"RulerBar", "EditBar"},
 WindowSize->{808, 1185},
-WindowMargins->{{Automatic, 516}, {Automatic, 25}},
+WindowMargins->{{Automatic, 212}, {Automatic, 0}},
 PrintingCopies->1,
 PrintingPageRange->{1, Automatic},
 FrontEndVersion->"13.0 for Mac OS X ARM (64-bit) (February 4, 2022)",
@@ -2235,7 +2000,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 78058, 2190, 3309, "Text",ExpressionUUID->"d1b4b3e2-350f-4710-9acc-bbb4b77689e0"]
+Cell[558, 20, 72530, 1955, 3145, "Text",ExpressionUUID->"d1b4b3e2-350f-4710-9acc-bbb4b77689e0"]
 }
 ]
 *)
