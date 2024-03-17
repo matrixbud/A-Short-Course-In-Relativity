@@ -1,3 +1,4 @@
 # A-Short-Course-In-Relativity
-I have included my solutions to problems for the text "A Short Course In Relativity" by James Foster and J. David Nightingale, 3rd edition. Some of my solutions are typed and some hand-written.
-I may eventually include my "course notes" which are more like an instructor's manual since I try to fill in the many, many (intentionally) missing details that allowed the authors to keep their book compact and focused on the issues. My notes are more focused on completing every formula, for myself. I did not take a course from a lecturer but merely read the book on my own. So, all errors are mine. In order to fill in the details, I actually have about 1.5 times as many typed pages as the authors.
+This repository was merged into a new repository named General Relativity. I delete the hand-written exercise solutions, transferring over only the typed oned. If anyone desires me to repost the hand-written ones, please contact me. 
+
+I will delete this repository after a while.
